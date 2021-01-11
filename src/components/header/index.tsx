@@ -3,6 +3,7 @@
  */
 import React, { FC, useState } from 'react';
 import { Button, Menu } from 'antd';
+import { history } from 'umi';
 import styles from './styles/index.less';
 const { SubMenu } = Menu;
 interface PropTypes {}
@@ -10,29 +11,30 @@ const Header: FC<PropTypes> = function(props) {
   const [current, setCurrent] = useState('mail'),
     pageList = [
       {
-        key: 'home',
+        key: '/home',
         title: 'Home',
-        url: '/home',
       },
       {
-        key: 'home',
+        key: '/stolist',
         title: 'STO Projects ',
-        url: '/stolist',
       },
       {
-        key: 'home',
+        key: '/howitworks',
         title: 'How It Works',
-        url: '/howitworks',
       },
       {
-        key: 'home',
+        key: '/whoweare',
         title: 'Who We Are',
-        url: '/whoweare',
       },
     ];
-  function renderPages() {}
+  function renderPages() {
+    return pageList.map(item => {
+      return <Menu.Item key={item.key}>{item.title}</Menu.Item>;
+    });
+  }
   function handleClick({ key }) {
     setCurrent(key);
+    history.push(`/home${key}`);
   }
   return (
     <div className={styles['header']}>
@@ -44,9 +46,7 @@ const Header: FC<PropTypes> = function(props) {
             selectedKeys={[current]}
             mode="horizontal"
           >
-            <Menu.Item key="mail">Navigation One</Menu.Item>
-            <Menu.Item key="app">Navigation Two</Menu.Item>
-            <Menu.Item key="alipay">Navigation Four - Link</Menu.Item>
+            {renderPages()}
           </Menu>
         </div>
         <Button type="primary">Get in Touch</Button>
