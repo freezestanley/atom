@@ -3,13 +3,14 @@ import theme from './config/theme';
 import routes from './config/routes';
 const outputPath = 'dist/';
 const env = process.env.NODE_ENV;
-const otpath = env === 'development' ? 'http://127.0.0.1:8000/' : outputPath;
 
 const path = require('path')
 export default defineConfig({
   ssr: {
     devServerRender: false,
   },
+  theme,
+  title: 'Atom 8',
   locale: {
     default: 'zh-CN',
     antd: false,
@@ -26,13 +27,6 @@ export default defineConfig({
     type: 'none',
   },
   outputPath: outputPath,
-  publicPath: otpath,
+  publicPath: env === 'development' ? 'http://127.0.0.1:8000/' : outputPath,
   routes,
-  theme,
-  alias: {
-    '@': path.resolve(__dirname, 'src'),
-    '@less': path.resolve(__dirname, 'src/less'),
-    API: path.resolve(__dirname, 'src/api'),
-    utils: path.resolve(__dirname, 'src/utils'),
-  }
 });
