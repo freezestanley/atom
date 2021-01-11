@@ -1,6 +1,8 @@
 import React from 'react';
 import { connect, useIntl, getLocale, setLocale, Helmet } from 'umi';
 import { Button } from 'antd';
+import Header from '@/components/header';
+import Footer from '@/components/footer';
 
 const Home = props => {
   const { title } = props;
@@ -16,8 +18,8 @@ const Home = props => {
   };
   const intl = useIntl();
   return (
-    <div>
-      <h1>{title}</h1>
+    <>
+      <Header />
       <Helmet>
         <title>{title}</title>
       </Helmet>
@@ -27,7 +29,8 @@ const Home = props => {
         })}
       </h2>
       <Button onClick={changeLangs}>切换语言</Button>
-    </div>
+      <Footer />
+    </>
   );
 };
 Home.getInitialProps = async ({ store, isServer, history, match, route }) => {
