@@ -22,10 +22,13 @@ const Home: FC<PropTypes> = props => {
   return (
     <>
       <Header />
-      <div>asdfasdfasdf</div>
       <Helmet>
         <title>{title}</title>
       </Helmet>
+      {/* <div>asdfasdfasdf</div>
+      <Helmet>
+        <title>{title}</title>
+      </Helmet> */}
       {/* <h2>
         {intl.formatMessage({
           id: 'umi',
