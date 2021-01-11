@@ -1,25 +1,41 @@
 {
   "compilerOptions": {
-    "target": "esnext",
+    "incremental": true, // 增量编译, 相当于sourceMap
+    "tsBuildInfoFile": "./dist/tsBuildInfo",
+    "outDir": "build/dist",
     "module": "esnext",
-    "moduleResolution": "node",
-    "importHelpers": true,
-    "jsx": "react",
-    "esModuleInterop": true,
+    "target": "esnext",
+    "lib": ["esnext", "dom", "ES6"],
     "sourceMap": true,
-    "baseUrl": "./",
+    "baseUrl": ".",
+    "jsx": "react",
+    "allowSyntheticDefaultImports": true,
+    "moduleResolution": "node",
+    "forceConsistentCasingInFileNames": true,
+    "noImplicitReturns": false,
+    "suppressImplicitAnyIndexErrors": true,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "allowJs": true,
+    "skipLibCheck": true,
+    "experimentalDecorators": true,
     "strict": true,
+    "noImplicitAny": false,
+    "strictNullChecks": false,
+    "removeComments": true,
     "paths": {
       "@/*": ["src/*"],
+      // "@@/*": ["./src/.umi-production/*"]
       "@@/*": ["src/.umi/*"]
-    },
-    "allowSyntheticDefaultImports": true
+    }
   },
-  "include": [
-    "mock/**/*",
-    "src/**/*",
-    "config/**/*",
-    ".umirc.ts",
-    "typings.d.ts"
+  "exclude": [
+    "node_modules",
+    "build",
+    "dist",
+    "scripts",
+    "src/.umi/*",
+    "webpack",
+    "jest"
   ]
 }
