@@ -1,5 +1,5 @@
 import { defineConfig } from 'umi';
-
+import routes from './config/routes';
 const outputPath = 'dist/';
 
 const env = process.env.NODE_ENV;
@@ -9,6 +9,10 @@ export default defineConfig({
   ssr: {
     devServerRender: false,
   },
+  theme: {
+    'primary-color': '#ef570c',
+  },
+  title: 'Atom 8',
   locale: {
     default: 'zh-CN',
     antd: false,
@@ -26,5 +30,5 @@ export default defineConfig({
   },
   outputPath: outputPath,
   publicPath: path,
-  routes: [{ path: '/', component: '@/pages/index' }],
+  routes,
 });

@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { FC } from 'react';
 import { connect, useIntl, getLocale, setLocale, Helmet } from 'umi';
 import { Button } from 'antd';
 import Header from '@/components/header';
 import Footer from '@/components/footer';
-
-const Home = props => {
+interface PropTypes {
+  title: string;
+}
+const Home: FC<PropTypes> = props => {
   const { title } = props;
   console.log('renderd', title);
   const changeLangs = () => {
@@ -23,16 +25,18 @@ const Home = props => {
       <Helmet>
         <title>{title}</title>
       </Helmet>
-      <h2>
+      {/* <h2>
         {intl.formatMessage({
           id: 'umi',
         })}
       </h2>
-      <Button onClick={changeLangs}>切换语言</Button>
+      <Button onClick={changeLangs}>切换语言</Button> */}
+      {props.children}
       <Footer />
     </>
   );
 };
+// @ts-ignore
 Home.getInitialProps = async ({ store, isServer, history, match, route }) => {
   // console.log(ctx);
   if (!isServer) {
