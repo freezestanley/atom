@@ -23,11 +23,6 @@ const routers: IConfig['routes'] = [
       { exact: true, path: '*', redirect: './home/home' },
     ],
   },
-  // {
-  //   path: '/login',
-  //   component: './login/index',
-  //   meta: { title: '账号登录' },
-  // }, // 登录
   { exact: true, path: '*', redirect: '/home' },
 ];
 

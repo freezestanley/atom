@@ -1,12 +1,10 @@
-import React, { FC } from 'react';
+import React from 'react';
 import { connect, useIntl, getLocale, setLocale, Helmet } from 'umi';
 import { Button } from 'antd';
 import Header from '@/components/header';
 import Footer from '@/components/footer';
-interface PropTypes {
-  title: string;
-}
-const Home: FC<PropTypes> = props => {
+
+const Coming = props => {
   const { title } = props;
   console.log('renderd', title);
   const changeLangs = () => {
@@ -22,23 +20,11 @@ const Home: FC<PropTypes> = props => {
   return (
     <>
       <Header />
-      <div>asdfasdfasdf</div>
-      <Helmet>
-        <title>{title}</title>
-      </Helmet>
-      {/* <h2>
-        {intl.formatMessage({
-          id: 'umi',
-        })}
-      </h2>
-      <Button onClick={changeLangs}>切换语言</Button> */}
-      {props.children}
       <Footer />
     </>
   );
 };
-// @ts-ignore
-Home.getInitialProps = async ({ store, isServer, history, match, route }) => {
+Coming.getInitialProps = async ({ store, isServer, history, match, route }) => {
   // console.log(ctx);
   if (!isServer) {
     return;
@@ -48,4 +34,4 @@ Home.getInitialProps = async ({ store, isServer, history, match, route }) => {
   return { global };
 };
 // @ts-ignore
-export default connect(({ global }) => ({ title: global.title }))(Home);
+export default connect(({ global }) => ({ title: global.title }))(Coming);
