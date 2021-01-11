@@ -1,32 +1,35 @@
 /**
  * @description 描述
  */
-import React, { FC, useState } from 'react';
+import React, { FC, useState, useEffect } from 'react';
 import { Button, Menu } from 'antd';
 import { history } from 'umi';
 import styles from './styles/index.less';
-const { SubMenu } = Menu;
 interface PropTypes {}
 const Header: FC<PropTypes> = function(props) {
-  const [current, setCurrent] = useState('mail'),
+  const [current, setCurrent] = useState<string>('/home/home'),
     pageList = [
       {
-        key: '/home',
+        key: '/home/home',
         title: 'Home',
       },
       {
-        key: '/stolist',
+        key: '/home/stolist',
         title: 'STO Projects ',
       },
       {
-        key: '/howitworks',
+        key: '/home/howitworks',
         title: 'How It Works',
       },
       {
-        key: '/whoweare',
+        key: '/home/whoweare',
         title: 'Who We Are',
       },
     ];
+  useEffect(() => {
+    const curr = pageList.find(item => item.key === history.location.pathname);
+    curr?.key && setCurrent(curr?.key);
+  }, []);
   function renderPages() {
     return pageList.map(item => {
       return <Menu.Item key={item.key}>{item.title}</Menu.Item>;
@@ -34,7 +37,7 @@ const Header: FC<PropTypes> = function(props) {
   }
   function handleClick({ key }) {
     setCurrent(key);
-    history.push(`/home${key}`);
+    history.push(key);
   }
   return (
     <div className={styles['header']}>
