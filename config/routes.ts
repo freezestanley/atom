@@ -1,26 +1,26 @@
 import { IConfig } from 'umi';
 const routers: IConfig['routes'] = [
   {
-    path: '/home',
+    path: '/',
     component: '@/pages/index',
     routes: [
       {
-        path: '/home/home',
+        path: '/home',
         component: '@/pages/home/index',
       },
       {
-        path: '/home/stolist',
-        component: '@/pages/home/sto/list/index',
+        path: '/stolist',
+        component: '@/pages/sto/list/index',
       },
       {
-        path: '/home/howitworks',
-        component: '@/pages/home/howitworks/index',
+        path: '/howitworks',
+        component: '@/pages/howitworks/index',
       },
       {
-        path: '/home/whoweare',
-        component: '@/pages/home/whoweare/index',
+        path: '/whoweare',
+        component: '@/pages/whoweare/index',
       },
-      { exact: true, path: '*', redirect: './home/home' },
+      { exact: true, path: '*', redirect: './home' },
     ],
   },
   { exact: true, path: '*', redirect: '/home' },

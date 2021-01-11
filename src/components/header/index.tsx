@@ -10,19 +10,19 @@ const Header: FC<PropTypes> = function(props) {
   const [current, setCurrent] = useState<string>('/home/home'),
     pageList = [
       {
-        key: '/home/home',
+        key: '/home',
         title: 'Home',
       },
       {
-        key: '/home/stolist',
+        key: '/stolist',
         title: 'STO Projects ',
       },
       {
-        key: '/home/howitworks',
+        key: '/howitworks',
         title: 'How It Works',
       },
       {
-        key: '/home/whoweare',
+        key: '/whoweare',
         title: 'Who We Are',
       },
     ];
