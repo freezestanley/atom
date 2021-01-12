@@ -8,6 +8,7 @@
     justify-content: flex-start;
     align-items: center;
     background-color: #fff;
+    position: relative;
     .logo {
       margin-right: 263px;
       width: 203px;
@@ -33,6 +34,21 @@
         .ant-menu-horizontal {
           border-bottom: none;
         }
+      }
+    }
+    .language {
+      position: absolute;
+      padding: 0;
+      margin: 0;
+      display: table;
+      top: 20px;
+      right: 10px;
+      & > li {
+        list-style: none;
+        display: table-cell;
+        font-size: 16px;
+        padding-right: 10px;
+        color: #999;
       }
     }
   }
