@@ -9,9 +9,9 @@ const Header: FC<PropTypes> = function(props) {
   return (
     <div className={styles['footer']}>
       <div className={styles['footer-guide']}>
-        <div className={'logo'}>
+        {/* <div className={'logo'}>
           <img src={logo} alt="logo" />
-        </div>
+        </div> */}
         <div>
           <p>Home </p>
           <p>About us </p>
