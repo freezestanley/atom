@@ -31,7 +31,7 @@ const STOMenu: FC<MenuPropTypes> = function(props) {
   );
 };
 
-const Header: FC<PropTypes> = function(props) {
+const Footer: FC<PropTypes> = function(props) {
   const intl = useIntl();
 
   const menulist = [
@@ -122,4 +122,4 @@ const Header: FC<PropTypes> = function(props) {
   );
 };
 
-export default Header;
+export default Footer;

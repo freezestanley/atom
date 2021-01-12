@@ -3,28 +3,37 @@
  */
 import React, { FC, useState, useEffect } from 'react';
 import { Button, Menu } from 'antd';
-import { history } from 'umi';
+import { history, useIntl } from 'umi';
 import styles from './styles/index.less';
 const logo = require('./images/atom8_logo_1.png');
 interface PropTypes {}
 const Header: FC<PropTypes> = function(props) {
-  const [current, setCurrent] = useState<string>('/home/home'),
+  const intl = useIntl(),
+    [current, setCurrent] = useState<string>('/home/home'),
     pageList = [
       {
         key: '/home',
-        title: 'Home',
+        title: intl.formatMessage({
+          id: 'footer_home',
+        }),
       },
       {
         key: '/stolist',
-        title: 'STO Projects ',
+        title: intl.formatMessage({
+          id: 'footer_stoprojects',
+        }),
       },
       {
         key: '/howitworks',
-        title: 'How It Works',
+        title: intl.formatMessage({
+          id: 'footer_howitworks',
+        }),
       },
       {
         key: '/whoweare',
-        title: 'Who We Are',
+        title: intl.formatMessage({
+          id: 'footer_whoweare',
+        }),
       },
     ];
   useEffect(() => {
