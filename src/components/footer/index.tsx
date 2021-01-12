@@ -1,32 +1,56 @@
 /**
  * @description 描述
  */
-import React, { FC } from 'react';
+import React, { FC, Fragment } from 'react';
 import styles from './styles/index.less';
 const logo = require('./images/atom8_logo_1.png');
-interface PropTypes {}
+interface PropTypes { }
+
+const menulist = [
+  { label: "Home", descript: ["Conditions of Use of Website"]},
+  { label: "About us", descript: [" User Guide and FAQ"]},
+  { label: "STO projects", descript: [" Data Privacy Policy"] },
+  { label: "How it works", descript: [" Cookies Policy"] }
+]
+
+interface MenuPropTypes {
+  menu: {
+    label: String,
+    descript: String[],
+  }[]
+}
+
+const STOMenu: FC<MenuPropTypes> = function (props) {
+  return (
+    <dl className={ styles.menulist }>
+      {
+        props.menu.map((ele, idx, arr) => {
+          return (
+            <Fragment  key={`${idx}c`}>
+              <dt key={`${idx}a`}>{ele.label}</dt>
+              {
+                ele.descript.map((va, ix, ay) => {
+                  return (<dd  key={`${ix}b`}>{va}</dd>)
+                })
+              }
+            </Fragment>
+          )
+        })
+      }
+    </dl>
+  )
+}
+
+
 const Header: FC<PropTypes> = function(props) {
   return (
     <div className={styles['footer']}>
-      <div className={styles['footer-guide']}>
-        {/* <div className={'logo'}>
-          <img src={logo} alt="logo" />
-        </div> */}
-        <div>
-          <p>Home </p>
-          <p>About us </p>
-          <p>STO projects </p>
-          <p>How it works </p>
-        </div>
-        <div>
-          <p>Conditions of Use of Website</p>
-          <p>User Guide and FAQ</p>
-          <p>Data Privacy Policy</p>
-          <p>Cookies Policy</p>
-        </div>
+      <div className={ styles['footer-guide']}>
+        <STOMenu menu={ menulist}/>
       </div>
       <div className={styles['copyright']}>© Copyright Atom 8 2020</div>
       <div className={styles['rectangle']}>
+        <div className={styles['rectangle-box']}>
         <p>
           This information (the “Information”) is provided to existing and
           prospective investors in Atom 8 Ltd. (the "Company"). The Information
@@ -82,13 +106,14 @@ const Header: FC<PropTypes> = function(props) {
           regulations of such jurisdiction.
         </p>
         <p>
-          The Information is being provided solely for general information
-          purposes and is not, shall not be construed as, and does not
-          constitute as legal, business, or tax advice. In deciding whether to
-          make any investment decision, the recipient must rely on its own
-          evaluation of the terms of any proposed investment and the merits and
-          risks involved and should seek independent advice where necessary.
+            The Information is being provided solely for general information
+            purposes and is not, shall not be construed as, and does not
+            constitute as legal, business, or tax advice. In deciding whether to
+            make any investment decision, the recipient must rely on its own
+            evaluation of the terms of any proposed investment and the merits and
+            risks involved and should seek independent advice where necessary.
         </p>
+        </div>
       </div>
     </div>
   );
