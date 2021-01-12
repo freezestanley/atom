@@ -12,7 +12,7 @@ const Home: FC<PropTypes> = props => {
   const changeLangs = () => {
     const lang = getLocale();
     console.log('changeLangs', lang);
-    const change = lang === 'zh-CN' ? 'en-US' : 'zh-CN';
+    const change = lang === 'zh-TW' ? 'en-US' : 'zh-TW';
     //     // 刷新页面
     // setLocale('zh-TW', true);
     // // 不刷新页面
