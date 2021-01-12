@@ -38,6 +38,31 @@ const Home: FC<PropTypes> = function (props) {
       <h2>We DON’T displace! We build on the well-established capital market infrastructure in Hong Kong.</h2>
       <div className={styles.valuesbox}>
         <h3>A blockchain-powered platform that provides end-to-end STO solutions</h3>
+        <h3>Where we add value</h3>
+        <ul>
+          <li>
+            <h4>Issuers</h4>
+            <p>Equity</p>
+            <p>Debt</p>
+            <p>Real estate</p>
+            <p>Fine arts</p>
+            <p>etc.</p>
+          </li>
+          <li>
+            <h4>Product structuring</h4>
+            <p>Token Economics Advisory</p>
+          </li>
+          <li>
+            <h4>Token creation</h4>
+          </li>
+          <li>
+            <h4>Distribution</h4>
+            <p>Post-issuance Token Management</p>
+          </li>
+          <li>
+            <h4>Investors</h4>
+          </li>
+        </ul>
       </div>
     </section>
     <section className={styles.why}>
