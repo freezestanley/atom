@@ -1,0 +1,62 @@
+.add-value-box {
+  position: relative;
+  .content {
+    position: absolute;
+    width: 864px;
+    z-index: 3;
+    top: 112px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    // align-items: center;
+    .item {
+      .icon {
+        width: 112px;
+        height: 112px;
+        padding: 20px;
+        border-radius: 56px;
+        &.border {
+          border: 3px solid #ef570c;
+          background-color: #fff;
+        }
+        & > img {
+          width: 100%;
+        }
+      }
+      .title {
+        width: 130px;
+        height: 52px;
+        margin-bottom: 16px;
+        font-size: 22px;
+        font-weight: 600;
+        text-align: center;
+      }
+    }
+  }
+
+  .bg {
+    position: absolute;
+    z-index: 2;
+    top: 42px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 532px;
+    height: 356px;
+    padding: 16px 9px 47px 59px;
+    opacity: 0.9;
+    border-radius: 24px;
+    background-color: #ffeeb1;
+  }
+  .line {
+    position: absolute;
+    top: 174px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    width: 714px;
+    height: 10px;
+    border-radius: 24px;
+    background-color: #ef570c;
+  }
+}
