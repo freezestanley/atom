@@ -5,6 +5,7 @@ import React, { FC, useState, useEffect } from 'react';
 import { Button, Menu } from 'antd';
 import { history } from 'umi';
 import styles from './styles/index.less';
+const logo = require('./images/atom8_logo_1.png');
 interface PropTypes {}
 const Header: FC<PropTypes> = function(props) {
   const [current, setCurrent] = useState<string>('/home/home'),
@@ -42,7 +43,9 @@ const Header: FC<PropTypes> = function(props) {
   return (
     <div className={styles['header']}>
       <header>
-        <div className={styles['logo']}></div>
+        <div className={styles['logo']}>
+          <img src={logo} alt="" />
+        </div>
         <div className={styles['pages']}>
           <Menu
             onClick={handleClick}
