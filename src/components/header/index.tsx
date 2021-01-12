@@ -3,9 +3,11 @@
  */
 import React, { FC, useState, useEffect } from 'react';
 import { Button, Menu } from 'antd';
-import { history, useIntl } from 'umi';
+import { connect, useIntl, getLocale, setLocale, Helmet, history } from 'umi';
 import styles from './styles/index.less';
+
 const logo = require('./images/atom8_logo_1.png');
+
 interface PropTypes {}
 const Header: FC<PropTypes> = function(props) {
   const intl = useIntl(),
@@ -49,6 +51,12 @@ const Header: FC<PropTypes> = function(props) {
     setCurrent(key);
     history.push(key);
   }
+
+  const changeLangs = (language: String) => {
+    const change = language === 'tw' ? 'en-US' : 'zh-TW';
+    setLocale(change, false);
+  };
+
   return (
     <div className={styles['header']}>
       <header>
@@ -69,6 +77,11 @@ const Header: FC<PropTypes> = function(props) {
             id: 'header_get_in_touch',
           })}
         </Button>
+        <ul className={styles['language']}>
+          <li onClick={() => changeLangs('tw')}>En</li>
+          <li onClick={() => changeLangs('en')}>繁</li>
+          {/* <li onClick={ () => changeLangs('cn') }>中</li> */}
+        </ul>
       </header>
     </div>
   );
