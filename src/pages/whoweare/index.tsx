@@ -3,15 +3,9 @@
  */
 import React, { FC } from 'react';
 import AddValues from './components/addValues';
+import SubTitle from './components/subTitle';
 import styles from './styles/index.less';
-const [banner, ...addValueImgs] = [
-  require('./images/who_we_are_banner1.png'),
-  require('./images/Issuers.png'),
-  require('./images/Product structuring.png'),
-  require('./images/Token creation.png'),
-  require('./images/Distribution.png'),
-  require('./images/Investors.png'),
-];
+const [banner] = [require('./images/who_we_are_banner1.png')];
 interface PropTypes {}
 
 const WhoWeAre: FC<PropTypes> = function(props) {
@@ -51,7 +45,9 @@ const WhoWeAre: FC<PropTypes> = function(props) {
           </div>
         </div>
       </div>
-      <div className={styles['core-values']}></div>
+      <div className={styles['core-values']}>
+        <SubTitle>Core Values</SubTitle>
+      </div>
       <div className={styles['senior-management']}></div>
       <div className={styles['latest-thinking']}></div>
       <div className={styles['our-investors']}></div>
