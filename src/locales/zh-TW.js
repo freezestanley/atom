@@ -6,7 +6,7 @@ export default {
   umi: '你好 umi',
 
   /* header */
-
+  header_get_in_touch: '登入',
   /* header end */
 
   /* footer */

@@ -64,7 +64,11 @@ const Header: FC<PropTypes> = function(props) {
             {renderPages()}
           </Menu>
         </div>
-        <Button type="primary">Get in Touch</Button>
+        <Button type="primary">
+          {intl.formatMessage({
+            id: 'header_get_in_touch',
+          })}
+        </Button>
       </header>
     </div>
   );

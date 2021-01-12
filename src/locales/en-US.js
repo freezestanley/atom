@@ -1,5 +1,6 @@
 export default {
   umi: 'hello umi',
+  header_get_in_touch: 'Get in Touch',
   footer_home: 'Home',
   footer_home_description: 'Conditions of Use of Website',
   footer_aboutus: 'About us',
