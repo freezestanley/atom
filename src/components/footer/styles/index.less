@@ -1,8 +1,6 @@
+@import '~@/less/func.less';
 .footer {
   width: 100%;
-  .footer-guide {
-    height: 318px;
-  }
   .copyright {
     height: 56px;
     line-height: 56px;
@@ -14,10 +12,49 @@
   }
   .rectangle {
     background-color: #611f1f;
-    text-align: center;
-    font-size: 10px;
-    letter-spacing: normal;
-    color: rgba(255, 255, 255, 0.6);
-    padding: 34px 20px 28px;
+    .rectangle-box {
+      .main-container();
+      text-align: left;
+      font-size: 10px;
+      letter-spacing: normal;
+      color: rgba(255, 255, 255, 0.6);
+      padding: 34px 20px 28px;
+    }
+  }
+  .footer-guide {
+    .main-container();
+    background: url('../images/atom8_logo_1.png') no-repeat;
+    background-position: 130px 45px;
+    background-size: 203px 70px;
+    padding: 1px 0;
+    &::after {
+      content: ' ';
+      clear: both;
+      width: 100%;
+      display: block;
+    }
+    .menulist {
+      float: right;
+      width: 660px;
+      margin: 45px 150px 130px 0;
+      padding: 0;
+      font-family: Inter;
+      font-size: 16px;
+      font-weight: normal;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 2.25;
+      letter-spacing: normal;
+      color: #544837;
+      & > dt {
+        width: 50%;
+        display: inline-block;
+        text-align: right;
+      }
+      & > dd {
+        display: inline-block;
+        margin-left: 100px;
+      }
+    }
   }
 }

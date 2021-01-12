@@ -1,9 +1,13 @@
 /**
  * @description 描述
  */
-import React, { FC } from 'react';
+import React, { FC, Fragment } from 'react';
 import styles from './styles/index.less';
-interface PropTypes { }
+interface PropTypes {
+
+}
+
+
 
 
 
@@ -23,12 +27,7 @@ You may unsubscribe from these communications at any time. For more information,
         </div>
       </div>
 
-      <div className={ styles['sto_mene']}>
-      Home
-About us
-STO projects
-How it works
-      </div>
+
     </div >
   )
 };
