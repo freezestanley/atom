@@ -14,7 +14,7 @@ export const locale = {
     let lang;
     if (isBrowser()) {
       const navigatorLang = window.navigator.language.includes('zh')
-        ? 'zh-CN'
+        ? 'zh-TW'
         : 'en-US';
       /**
        *  最后默认是中文，这里可以根据自身项目需要修改
@@ -23,9 +23,9 @@ export const locale = {
        *  就可以完成默认语言的修改
        *
        */
-      lang = getCookie('umi_locale') || navigatorLang || 'zh-CN';
+      lang = getCookie('umi_locale') || navigatorLang || 'zh-TW';
     } else {
-      lang = getCookie('umi_locale') || global._navigatorLang || 'zh-CN';
+      lang = getCookie('umi_locale') || global._navigatorLang || 'zh-TW';
     }
     return lang;
   },
