@@ -1,0 +1,81 @@
+@import '~@/less/func.less';
+.whoweare {
+  .banner {
+    height: 300px;
+    & > img {
+      height: 100%;
+    }
+  }
+  // 在版心内的
+  .desc {
+    .main-container();
+    padding-top: 50px;
+    width: 1125px;
+    & > p {
+      font-size: 18px;
+      color: #373737;
+      margin-bottom: 20px;
+    }
+  }
+  .desc {
+    height: 416px;
+  }
+  // 增值
+  .blockchain-powered {
+    height: 376px;
+
+    position: relative;
+    .blockchain-powered-bg {
+      opacity: 0.3;
+      width: 100%;
+      height: 100%;
+      background-image: linear-gradient(
+        to bottom,
+        #f09819,
+        rgba(255, 88, 88, 0.3)
+      );
+    }
+    .card {
+      position: absolute;
+      top: -140px;
+      left: 50%;
+      z-index: 1;
+      transform: translateX(-50%);
+      width: 1163px;
+      height: 550px;
+      border-radius: 24px;
+      box-shadow: 0 2px 50px 0 rgba(0, 0, 0, 0.1);
+      background-color: #ffffff;
+      padding-top: 30px;
+      & > h3 {
+        text-align: center;
+        color: #2f281e;
+        font-size: 22px;
+        font-weight: 600;
+        margin-bottom: 0;
+      }
+      .card-tips {
+        position: absolute;
+        right: 34px;
+        bottom: 21px;
+        font-size: 16px;
+        color: #544837;
+      }
+    }
+  }
+  .core-values {
+    height: 775px;
+  }
+  .senior-management {
+    height: 620px + 42px;
+  }
+  .latest-thinking {
+    height: 880px + 42px;
+  }
+  .our-investors {
+    height: 380px + 42px;
+  }
+  .in-the-news {
+    height: 500px + 42px;
+  }
+}
