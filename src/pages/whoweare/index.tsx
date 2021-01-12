@@ -4,6 +4,8 @@
 import React, { FC } from 'react';
 import AddValues from './components/addValues';
 import SubTitle from './components/subTitle';
+import CoreCarousel from './components/coreCarousel';
+
 import styles from './styles/index.less';
 const [banner] = [require('./images/who_we_are_banner1.png')];
 interface PropTypes {}
@@ -47,6 +49,7 @@ const WhoWeAre: FC<PropTypes> = function(props) {
       </div>
       <div className={styles['core-values']}>
         <SubTitle>Core Values</SubTitle>
+        <CoreCarousel />
       </div>
       <div className={styles['senior-management']}></div>
       <div className={styles['latest-thinking']}></div>
