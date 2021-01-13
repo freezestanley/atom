@@ -6,6 +6,7 @@ import AddValues from './components/addValues';
 import SubTitle from './components/subTitle';
 import CoreCarousel from './components/coreCarousel';
 import SeniorManagement from './components/seniorManagement';
+import LatestThinking from './components/latestThinking';
 
 import styles from './styles/index.less';
 const [banner] = [require('./images/who_we_are_banner1.png')];
@@ -58,7 +59,10 @@ const WhoWeAre: FC<PropTypes> = function(props) {
           <SubTitle>Senior Management</SubTitle>
           <SeniorManagement />
         </div>
-        <div className={styles['latest-thinking']}></div>
+        <div className={styles['latest-thinking']}>
+          <SubTitle>Check Out Our Latest Thinking</SubTitle>
+          <LatestThinking />
+        </div>
         <div className={styles['our-investors']}></div>
         <div className={styles['in-the-news']}></div>
       </div>

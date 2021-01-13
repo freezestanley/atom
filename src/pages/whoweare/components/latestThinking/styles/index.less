@@ -1,0 +1,59 @@
+.last-thinking {
+  display: flex;
+  img {
+    width: 100%;
+  }
+  .list {
+    display: grid;
+    grid-template-columns: repeat(2, 264px);
+    grid-template-rows: repeat(2, 272px);
+    grid-row-gap: 27px;
+    grid-column-gap: 24px;
+    .list-box {
+      // background-color: #f55;
+    }
+  }
+  .head {
+    width: 552px;
+    margin-left: 32px;
+    .item {
+      img {
+        height: 294px;
+      }
+      .text {
+        padding-top: 25px;
+        padding-left: 47px;
+        & > div:first-child {
+          margin-bottom: 23px;
+        }
+        & > div:last-child {
+          font-size: 35px;
+        }
+      }
+    }
+  }
+  // 新闻组件
+  .item {
+    border-radius: 8px;
+    img {
+      height: 140px;
+    }
+    .text {
+      padding-top: 16px;
+      padding-left: 22px;
+      text-align: left;
+      & > div:first-child {
+        font-size: 10px;
+        color: #544837;
+        margin-bottom: 5px;
+      }
+      & > div:last-child {
+        font-family: Helvetica;
+        font-size: 24px;
+        font-weight: normal;
+        color: #2f281e;
+        line-height: 1.2;
+      }
+    }
+  }
+}
