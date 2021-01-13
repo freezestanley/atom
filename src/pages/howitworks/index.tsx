@@ -76,13 +76,91 @@ const HowItWork: FC<PropTypes> = function (props) {
           <p>Security tokens issued to qualified investors (T+0 near-instant settlement)</p>
         </div>
         <div>
-          <h3>Secondary<br/>trading​</h3>
+          <h3>Secondary<br />trading​</h3>
           <p>24/7 market access​</p>
         </div>
       </aside>
     </section>
-    <section className={styles.faq}></section>
-    <section className={styles.academy}></section>
+    <section className={styles.faq}>
+      <h2>FAQs</h2>
+      <div>
+        <aside>
+          <h3>For issuers / sponsors</h3>
+          <ul>
+            <li>
+              <h4>Is Atom 8 licensed?</h4>
+              <p>Atom 8 is a technology solution provider for SFC Regulated Activities (RA) licensees and Issuers. We don’t advise on corporate finance nor deal in securities.</p>
+            </li>
+            <li>
+              <h4>Is Atom 8 licensed?</h4>
+              <p>Atom 8 is a technology solution provider for SFC Regulated Activities (RA) licensees and Issuers. We don’t advise on corporate finance nor deal in securities.</p>
+            </li>
+            <li>
+              <h4>Is Atom 8 licensed?</h4>
+              <p>Atom 8 is a technology solution provider for SFC Regulated Activities (RA) licensees and Issuers. We don’t advise on corporate finance nor deal in securities.</p>
+            </li>
+          </ul>
+        </aside>
+        <aside>
+          <h3>For issuers / sponsors</h3>
+          <ul>
+            <li>
+              <h4>Is Atom 8 licensed?</h4>
+              <p>Atom 8 is a technology solution provider for SFC Regulated Activities (RA) licensees and Issuers. We don’t advise on corporate finance nor deal in securities.</p>
+            </li>
+            <li>
+              <h4>Is Atom 8 licensed?</h4>
+              <p>Atom 8 is a technology solution provider for SFC Regulated Activities (RA) licensees and Issuers. We don’t advise on corporate finance nor deal in securities.</p>
+            </li>
+            <li>
+              <h4>Is Atom 8 licensed?</h4>
+              <p>Atom 8 is a technology solution provider for SFC Regulated Activities (RA) licensees and Issuers. We don’t advise on corporate finance nor deal in securities.</p>
+            </li>
+          </ul>
+        </aside>
+        <div></div>
+      </div>
+    </section>
+    <section className={styles.academy}>
+      <h2>STO Academy</h2>
+      <div>
+        <aside>
+          <h3>For issuers / sponsors</h3>
+          <ul>
+            <li>
+              <h4>Is Atom 8 licensed?</h4>
+              <p>Atom 8 is a technology solution provider for SFC Regulated Activities (RA) licensees and Issuers. We don’t advise on corporate finance nor deal in securities.</p>
+            </li>
+            <li>
+              <h4>Is Atom 8 licensed?</h4>
+              <p>Atom 8 is a technology solution provider for SFC Regulated Activities (RA) licensees and Issuers. We don’t advise on corporate finance nor deal in securities.</p>
+            </li>
+            <li>
+              <h4>Is Atom 8 licensed?</h4>
+              <p>Atom 8 is a technology solution provider for SFC Regulated Activities (RA) licensees and Issuers. We don’t advise on corporate finance nor deal in securities.</p>
+            </li>
+          </ul>
+        </aside>
+        <aside>
+          <h3>For issuers / sponsors</h3>
+          <ul>
+            <li>
+              <h4>Is Atom 8 licensed?</h4>
+              <p>Atom 8 is a technology solution provider for SFC Regulated Activities (RA) licensees and Issuers. We don’t advise on corporate finance nor deal in securities.</p>
+            </li>
+            <li>
+              <h4>Is Atom 8 licensed?</h4>
+              <p>Atom 8 is a technology solution provider for SFC Regulated Activities (RA) licensees and Issuers. We don’t advise on corporate finance nor deal in securities.</p>
+            </li>
+            <li>
+              <h4>Is Atom 8 licensed?</h4>
+              <p>Atom 8 is a technology solution provider for SFC Regulated Activities (RA) licensees and Issuers. We don’t advise on corporate finance nor deal in securities.</p>
+            </li>
+          </ul>
+        </aside>
+        <div></div>
+      </div>
+    </section>
   </main>;
 };
 
