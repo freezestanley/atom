@@ -7,9 +7,19 @@ import SubTitle from './components/subTitle';
 import CoreCarousel from './components/coreCarousel';
 import SeniorManagement from './components/seniorManagement';
 import LatestThinking from './components/latestThinking';
+import InTheNews from './components/inTheNews';
 
 import styles from './styles/index.less';
 const [banner] = [require('./images/who_we_are_banner1.png')];
+const investors = [
+  require('./images/investors/1_1.png'),
+  require('./images/investors/1_2.png'),
+  require('./images/investors/1_3.png'),
+  require('./images/investors/2_1.png'),
+  require('./images/investors/2_2.png'),
+  require('./images/investors/2_3.png'),
+  require('./images/investors/2_4.png'),
+];
 interface PropTypes {}
 
 const WhoWeAre: FC<PropTypes> = function(props) {
@@ -63,8 +73,24 @@ const WhoWeAre: FC<PropTypes> = function(props) {
           <SubTitle>Check Out Our Latest Thinking</SubTitle>
           <LatestThinking />
         </div>
-        <div className={styles['our-investors']}></div>
-        <div className={styles['in-the-news']}></div>
+        <div className={styles['our-investors']}>
+          <SubTitle>Our Investors</SubTitle>
+          <section>
+            <img src={investors[0]} alt="" />
+            <img src={investors[1]} alt="" />
+            <img src={investors[2]} alt="" />
+          </section>
+          <section>
+            <img src={investors[3]} alt="" />
+            <img src={investors[4]} alt="" />
+            <img src={investors[5]} alt="" />
+            <img src={investors[6]} alt="" />
+          </section>
+        </div>
+        <div className={styles['in-the-news']}>
+          <SubTitle>In the News</SubTitle>
+          <InTheNews />
+        </div>
       </div>
     </div>
   );
