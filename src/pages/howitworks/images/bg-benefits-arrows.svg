@@ -1,0 +1,8 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+
+<svg width="1214" height="70" version="1.1" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0 0 L359 0 L394 35 L359 70 L0 70 Z" style="fill:#bd3806"/>
+    <path d="M379 0 L763 0 L798 35 L763 70 L379 70 L414 35 Z" style="fill:#ef570c"/>
+    <path d="M783 0 L1177 0 L1212 35 L1177 70 L783 70 L818 35 Z" style="fill:#ef570c"/>
+</svg>
