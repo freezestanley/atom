@@ -3,6 +3,7 @@
  */
 import React, { FC } from 'react';
 import { Carousel } from 'antd';
+import classnames from 'classnames';
 import styles from './styles/index.less';
 const imgs = [
   require('./images/Core_Values_1.png'),
@@ -11,8 +12,22 @@ const imgs = [
   require('./images/Core_Values_4.png'),
   require('./images/Core_Values_5.png'),
 ];
+const [arrowImg] = [require('./images/arrow-right.png')];
 interface PropTypes {}
 const CoreCarousel: FC<PropTypes> = function(props) {
+  function arrow(left?: true) {
+    return (
+      <div>
+        <div
+          className={classnames(styles['arrow'], {
+            [styles['left']]: left,
+          })}
+        >
+          <img src={arrowImg} alt="" />
+        </div>
+      </div>
+    );
+  }
   function renderItem() {
     const texts = [
       'Excellence in everything we do.',
@@ -39,6 +54,8 @@ const CoreCarousel: FC<PropTypes> = function(props) {
         autoplaySpeed={1500}
         dots={false}
         arrows
+        prevArrow={arrow(true)}
+        nextArrow={arrow()}
         lazyLoad={'progressive'}
       >
         {renderItem()}

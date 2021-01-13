@@ -5,6 +5,7 @@ import React, { FC } from 'react';
 import AddValues from './components/addValues';
 import SubTitle from './components/subTitle';
 import CoreCarousel from './components/coreCarousel';
+import SeniorManagement from './components/seniorManagement';
 
 import styles from './styles/index.less';
 const [banner] = [require('./images/who_we_are_banner1.png')];
@@ -51,7 +52,10 @@ const WhoWeAre: FC<PropTypes> = function(props) {
         <SubTitle>Core Values</SubTitle>
         <CoreCarousel />
       </div>
-      <div className={styles['senior-management']}></div>
+      <div className={styles['senior-management']}>
+        <SubTitle>Senior Management</SubTitle>
+        <SeniorManagement />
+      </div>
       <div className={styles['latest-thinking']}></div>
       <div className={styles['our-investors']}></div>
       <div className={styles['in-the-news']}></div>
