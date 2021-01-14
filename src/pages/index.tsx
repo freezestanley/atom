@@ -1,6 +1,7 @@
 import React, { FC } from 'react';
 import { connect, useIntl, getLocale, setLocale, Helmet } from 'umi';
 import { Button } from 'antd';
+import '@/less/setting.less';
 import Header from '@/components/header';
 import Footer from '@/components/footer';
 interface PropTypes {

@@ -21,6 +21,13 @@ interface ItemTypes {
 }
 const InTheNews: FC<PropTypes> = function(props) {
   const settings = {
+      // autoplay
+      //     autoplaySpeed={1500}
+      //     dots={false}
+      //     arrows
+      //     prevArrow={arrow(true)}
+      //     nextArrow={arrow()}
+      //     lazyLoad={'progressive'}
       dots: false,
       speed: 500,
       slidesToShow: 3,
@@ -28,6 +35,7 @@ const InTheNews: FC<PropTypes> = function(props) {
       arrows: true,
       prevArrow: arrow(true),
       nextArrow: arrow(),
+      lazyLoad: 'progressive',
       // prevArrow: <CustomerArrow left />,
       // nextArrow: <CustomerArrow />,
     },
@@ -84,7 +92,19 @@ const InTheNews: FC<PropTypes> = function(props) {
   }
   return (
     <div className={styles['in_the_news']}>
-      <Carousel {...settings}>{renderList()}</Carousel>
+      <Carousel
+        autoplay
+        autoplaySpeed={1500}
+        dots={false}
+        arrows
+        prevArrow={arrow(true)}
+        nextArrow={arrow()}
+        lazyLoad={'progressive'}
+        slidesToShow={3}
+        slidesToScroll={3}
+      >
+        {renderList()}
+      </Carousel>
     </div>
   );
 };
