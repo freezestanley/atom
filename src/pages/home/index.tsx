@@ -59,24 +59,32 @@ const Home: FC<PropTypes> = function (props) {
         <h3>{i18n.formatMessage({ id: 'home_values_chart_text' })}</h3>
         <ul>
           <li>
-            <h4>{i18n.formatMessage({ id: 'home_values_chart_item_head_1_1' })}</h4>
-            <p>{i18n.formatMessage({ id: 'home_values_chart_item_text_1' })}</p>
+            <h4>{i18n.formatMessage({ id: 'home_values_chart_item_head_1' })}</h4>
+            <p className={styles.list}>{i18n.formatMessage({ id: 'home_values_chart_item_text_1_1' })}</p>
+            <p className={styles.list}>{i18n.formatMessage({ id: 'home_values_chart_item_text_1_2' })}</p>
+            <p className={styles.list}>{i18n.formatMessage({ id: 'home_values_chart_item_text_1_3' })}</p>
+            <p className={styles.list}>{i18n.formatMessage({ id: 'home_values_chart_item_text_1_4' })}</p>
+            <p className={styles.list}>{i18n.formatMessage({ id: 'home_values_chart_item_text_1_5' })}</p>
           </li>
           <li>
-            <h4>{i18n.formatMessage({ id: 'home_values_chart_item_head_2_1' })}</h4>
+            <h4>{i18n.formatMessage({ id: 'home_values_chart_item_head_2' })}</h4>
             <p>{i18n.formatMessage({ id: 'home_values_chart_item_text_2' })}</p>
           </li>
           <li>
-            <h4>{i18n.formatMessage({ id: 'home_values_chart_item_head_3_1' })}</h4>
+            <h4>{i18n.formatMessage({ id: 'home_values_chart_item_head_3' })}</h4>
           </li>
           <li>
-            <h4>{i18n.formatMessage({ id: 'home_values_chart_item_head_4_1' })}</h4>
+            <h4>{i18n.formatMessage({ id: 'home_values_chart_item_head_4' })}</h4>
             <p>{i18n.formatMessage({ id: 'home_values_chart_item_text_4' })}</p>
           </li>
           <li>
-            <h4>{i18n.formatMessage({ id: 'home_values_chart_item_head_5_1' })}</h4>
+            <h4>{i18n.formatMessage({ id: 'home_values_chart_item_head_5' })}</h4>
           </li>
         </ul>
+        <aside>
+          {i18n.formatMessage({ id: 'home_values_chart_comment_1' })}<br/>
+          {i18n.formatMessage({ id: 'home_values_chart_comment_2' })}
+        </aside>
       </div>
     </section>
     <section className={styles.why}>
@@ -105,7 +113,16 @@ const Home: FC<PropTypes> = function (props) {
     </section>
     <section className={styles.advisory}>
       <h2>{i18n.formatMessage({ id: 'home_advisory_head' })}</h2>
-      <div></div>
+      <div>
+        <h3>{i18n.formatMessage({ id: 'home_advisory_text_1' })}</h3>
+        <h3>{i18n.formatMessage({ id: 'home_advisory_text_2' })}</h3>
+        <h3>{i18n.formatMessage({ id: 'home_advisory_text_3' })}</h3>
+        <h3>{i18n.formatMessage({ id: 'home_advisory_text_4' })}</h3>
+        <h3>{i18n.formatMessage({ id: 'home_advisory_text_5' })}</h3>
+        <h3>{i18n.formatMessage({ id: 'home_advisory_text_6' })}</h3>
+        <h4>{i18n.formatMessage({ id: 'home_advisory_text_7' })}</h4>
+        <h4>{i18n.formatMessage({ id: 'home_advisory_text_8' })}</h4>
+      </div>
     </section>
     <section className={styles.products}>
       <h2>{i18n.formatMessage({ id: 'home_products_head' })}</h2>
@@ -134,7 +151,7 @@ const Home: FC<PropTypes> = function (props) {
           <p>{i18n.formatMessage({ id: 'home_products_item_text_2_3' })}</p>
           <p>{i18n.formatMessage({ id: 'home_products_item_text_2_4' })}</p>
           <p>{i18n.formatMessage({ id: 'home_products_item_text_2_5' })}</p>
-          <p>{i18n.formatMessage({ id: 'home_products_item_text_2_5' })}</p>
+          <p>{i18n.formatMessage({ id: 'home_products_item_text_2_6' })}</p>
         </li>
         <li>
           <h5>{i18n.formatMessage({ id: 'home_products_item_head_3' })}</h5>
