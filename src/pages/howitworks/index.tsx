@@ -87,7 +87,7 @@ const HowItWork: FC<PropTypes> = function (props) {
         <aside>
           <h3>For issuers / sponsors</h3>
           <ul>
-            <li>
+            <li className={styles.open}>
               <h4>Is Atom 8 licensed?</h4>
               <p>Atom 8 is a technology solution provider for SFC Regulated Activities (RA) licensees and Issuers. We don’t advise on corporate finance nor deal in securities.</p>
             </li>
@@ -108,7 +108,7 @@ const HowItWork: FC<PropTypes> = function (props) {
               <h4>Is Atom 8 licensed?</h4>
               <p>Atom 8 is a technology solution provider for SFC Regulated Activities (RA) licensees and Issuers. We don’t advise on corporate finance nor deal in securities.</p>
             </li>
-            <li>
+            <li className={styles.open}>
               <h4>Is Atom 8 licensed?</h4>
               <p>Atom 8 is a technology solution provider for SFC Regulated Activities (RA) licensees and Issuers. We don’t advise on corporate finance nor deal in securities.</p>
             </li>
@@ -127,7 +127,7 @@ const HowItWork: FC<PropTypes> = function (props) {
         <aside>
           <h3>For issuers / sponsors</h3>
           <ul>
-            <li>
+            <li className={styles.open}>
               <h4>Is Atom 8 licensed?</h4>
               <p>Atom 8 is a technology solution provider for SFC Regulated Activities (RA) licensees and Issuers. We don’t advise on corporate finance nor deal in securities.</p>
             </li>

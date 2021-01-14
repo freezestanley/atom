@@ -278,7 +278,12 @@
       font-weight: 500;
       line-height: 40px;
       height: 40px;
+      background: url(../images/icon-folded.svg) no-repeat right center;
       border-bottom: 1px solid #e9f0f2;
+    }
+
+    li.open h4 {
+      background: url(../images/icon-unfold.svg) no-repeat right center;
     }
 
     p {
@@ -287,6 +292,11 @@
       font-weight: normal;
       line-height: 1.75;
       margin-top: 16px;
+      display: none;
+    }
+
+    li.open p {
+      display: block;
     }
   }
 }
@@ -354,7 +364,12 @@
         font-weight: 500;
         line-height: 40px;
         height: 40px;
+        background: url(../images/icon-folded.svg) no-repeat right center;
         border-bottom: 1px solid #e9f0f2;
+      }
+
+      li.open h4 {
+        background: url(../images/icon-unfold.svg) no-repeat right center;
       }
 
       p {
@@ -363,6 +378,11 @@
         font-weight: normal;
         line-height: 1.75;
         margin-top: 16px;
+        display: none;
+      }
+
+      li.open p {
+        display: block;
       }
     }
 }
