@@ -2,87 +2,90 @@
  * @description 描述
  */
 import React, { FC } from 'react';
+import { useIntl } from 'umi';
 import styles from './styles/index.less';
+
 interface PropTypes { }
 const HowItWork: FC<PropTypes> = function (props) {
+  const i18n = useIntl();
   return <main className={styles.howitworks}>
     <section className={styles.banner}></section>
     <section className={styles.offerings}>
       <div>
-        <h2>What are STOs - <br />Security Token Offerings</h2>
-        <p>Security Tokens are digital representations of ownership of assets or economic rights, created via blockchain technology. They are widely regulated as securities in major jurisdictions worldwide.</p>
-        <aside>Underlying assets (illustrative)</aside>
+        <h2>{i18n.formatMessage({ id: 'how_banner_head_1' })}<br />{i18n.formatMessage({ id: 'how_banner_head_2' })}</h2>
+        <p>{i18n.formatMessage({ id: 'how_banner_text' })}</p>
+        <aside>{i18n.formatMessage({ id: 'how_illustrative' })}</aside>
       </div>
     </section>
     <section className={styles.factors}>
       <ul>
         <li>
-          <h2>Equity</h2>
-          <p>Common shares</p>
-          <p>Preferred shares</p>
-          <p>Voting, non-voting shares</p>
-          <p>REIT shares</p>
+          <h2>{i18n.formatMessage({ id: 'how_assets_item_head_1' })}</h2>
+          <p>{i18n.formatMessage({ id: 'how_assets_item_text_1_1' })}</p>
+          <p>{i18n.formatMessage({ id: 'how_assets_item_text_1_2' })}</p>
+          <p>{i18n.formatMessage({ id: 'how_assets_item_text_1_3' })}</p>
+          <p>{i18n.formatMessage({ id: 'how_assets_item_text_1_4' })}</p>
         </li>
         <li>
-          <h2>Debt</h2>
-          <p>Bonds</p>
-          <p>Asset Backed Securities</p>
-          <p>Sustainability-linked green financing projects (e.g. green financing)</p>
+          <h2>{i18n.formatMessage({ id: 'how_assets_item_head_2' })}</h2>
+          <p>{i18n.formatMessage({ id: 'how_assets_item_text_2_1' })}</p>
+          <p>{i18n.formatMessage({ id: 'how_assets_item_text_2_2' })}</p>
+          <p>{i18n.formatMessage({ id: 'how_assets_item_text_2_3' })}</p>
         </li>
         <li>
-          <h2>Fund</h2>
-          <p>Mutual fund </p>
-          <p>Hedge fund</p>
-          <p>Private Equity fund</p>
+          <h2>{i18n.formatMessage({ id: 'how_assets_item_head_3' })}</h2>
+          <p>{i18n.formatMessage({ id: 'how_assets_item_text_3_1' })}</p>
+          <p>{i18n.formatMessage({ id: 'how_assets_item_text_3_2' })}</p>
+          <p>{i18n.formatMessage({ id: 'how_assets_item_text_3_3' })}</p>
         </li>
         <li>
-          <h2>Alternative assets</h2>
-          <p>Real properties, real estate</p>
-          <p>Intellectual Property rights</p>
-          <p>Fine arts</p>
-          <p>Fine wine</p>
-          <p>Diamonds</p>
-          <p>Etc.</p>
+          <h2>{i18n.formatMessage({ id: 'how_assets_item_head_4' })}</h2>
+          <p>{i18n.formatMessage({ id: 'how_assets_item_text_4_1' })}</p>
+          <p>{i18n.formatMessage({ id: 'how_assets_item_text_4_2' })}</p>
+          <p>{i18n.formatMessage({ id: 'how_assets_item_text_4_3' })}</p>
+          <p>{i18n.formatMessage({ id: 'how_assets_item_text_4_4' })}</p>
+          <p>{i18n.formatMessage({ id: 'how_assets_item_text_4_5' })}</p>
+          <p>{i18n.formatMessage({ id: 'how_assets_item_text_4_6' })}</p>
         </li>
       </ul>
     </section>
     <section className={styles.benefits}>
-      <h2>STOs present unprecedented benefits to issuers and investors</h2>
-      <h4>Similar to traditional securities offering, but streamlined via digitization</h4>
+      <h2>{i18n.formatMessage({ id: 'how_sto_head' })}</h2>
+      <h4>{i18n.formatMessage({ id: 'how_sto_text' })}</h4>
       <ul>
-        <li>Pre-Issue Advisory​</li>
-        <li>Token Creation​</li>
-        <li>Token Management &amp; Trading​</li>
+        <li>{i18n.formatMessage({ id: 'how_sto_step_1' })}</li>
+        <li>{i18n.formatMessage({ id: 'how_sto_step_2' })}</li>
+        <li>{i18n.formatMessage({ id: 'how_sto_step_3' })}</li>
       </ul>
       <aside>
         <div>
-          <h3>Engage professionals​</h3>
-          <p>Financial advisors, legal counsel, tax advisor, STO advisor, listing venue​</p>
+          <h3>{i18n.formatMessage({ id: 'how_sto_item_head_1' })}​</h3>
+          <p>{i18n.formatMessage({ id: 'how_sto_item_text_1' })}</p>
         </div>
         <div>
-          <h3>Tokenization​</h3>
-          <p>Rules (e.g. selling restrictions, market scenarios) coded on smart contracts</p>
+          <h3>{i18n.formatMessage({ id: 'how_sto_item_head_2' })}​</h3>
+          <p>{i18n.formatMessage({ id: 'how_sto_item_text_2' })}</p>
         </div>
         <div>
-          <h3>Corporate actions</h3>
-          <p>Automated dividend/ interest distribution (asset specific)​</p>
+          <h3>{i18n.formatMessage({ id: 'how_sto_item_head_3' })}​</h3>
+          <p>{i18n.formatMessage({ id: 'how_sto_item_text_3' })}</p>
         </div>
         <div>
-          <h3>Structuring</h3>
-          <p>Legal, tax and accounting issues in different jurisdictions​</p>
+          <h3>{i18n.formatMessage({ id: 'how_sto_item_head_4' })}​</h3>
+          <p>{i18n.formatMessage({ id: 'how_sto_item_text_4' })}</p>
         </div>
         <div>
-          <h3>Issuance</h3>
-          <p>Security tokens issued to qualified investors (T+0 near-instant settlement)</p>
+          <h3>{i18n.formatMessage({ id: 'how_sto_item_head_5' })}​</h3>
+          <p>{i18n.formatMessage({ id: 'how_sto_item_text_5' })}</p>
         </div>
         <div>
-          <h3>Secondary<br />trading​</h3>
-          <p>24/7 market access​</p>
+          <h3>{i18n.formatMessage({ id: 'how_sto_item_head_6' })}<br />{i18n.formatMessage({ id: 'how_sto_item_head_6_2' })}​</h3>
+          <p>{i18n.formatMessage({ id: 'how_sto_item_text_6' })}</p>
         </div>
       </aside>
     </section>
     <section className={styles.faq}>
-      <h2>FAQs</h2>
+      <h2>{i18n.formatMessage({ id: 'how_faq_head' })}</h2>
       <div>
         <aside>
           <h3>For issuers / sponsors</h3>
@@ -122,7 +125,7 @@ const HowItWork: FC<PropTypes> = function (props) {
       </div>
     </section>
     <section className={styles.academy}>
-      <h2>STO Academy</h2>
+      <h2>{i18n.formatMessage({ id: 'how_academy_head' })}</h2>
       <div>
         <aside>
           <h3>For issuers / sponsors</h3>
