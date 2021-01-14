@@ -2,10 +2,9 @@
  * @description 描述
  */
 import React, { FC } from 'react';
-import { Carousel } from 'antd';
+import Carousel from 'react-slick';
 import classnames from 'classnames';
 import styles from './styles/index.less';
-import CustomerArrow from '../customerArrow';
 const [arrowImg] = [require('./images/arrow-right.png')];
 const imgs = [
   require('./images/who_we_are_news_dummy1.png'),
@@ -59,6 +58,25 @@ const InTheNews: FC<PropTypes> = function(props) {
         date: ' 03 Nov 2019',
         content: 'HKbitEX：7號金融牌申領門檻高',
       },
+      {
+        url: imgs[0],
+        author: 'Sharon Lewis',
+        date: '07 Dec 2020',
+        content:
+          'Hong Kong-based Virtual Asset Exchange HKbitEX Secures US$10M Series A2',
+      },
+      {
+        url: imgs[1],
+        author: 'HKET',
+        date: ' 07 Dec 2020',
+        content: 'HKbitEX完成1000萬美元融資　此前獲多名港交所前高層加入',
+      },
+      {
+        url: imgs[2],
+        author: '信報財經新聞',
+        date: ' 03 Nov 2019',
+        content: 'HKbitEX：7號金融牌申領門檻高',
+      },
     ];
   function arrow(left?: true) {
     return (
@@ -75,31 +93,34 @@ const InTheNews: FC<PropTypes> = function(props) {
   }
   function renderList() {
     if (!Array.isArray(mockList)) return;
-    return mockList.map(item => {
-      return <div>{renderItem(item)}</div>;
+    return mockList.map((item, idx) => {
+      // return <div>{idx}</div>;
+      return <div className={styles['box']}>{renderItem(item)}</div>;
     });
   }
   function renderItem(item: ItemTypes) {
     return (
       <div className={styles['item']}>
         <img src={item.url} alt="" />
-        <section>
-          By {item.author} | {item.date}
-        </section>
-        <section>{item.content}</section>
+        <div className={styles['content']}>
+          <section>
+            By {item.author} | {item.date}
+          </section>
+          <section>{item.content}</section>
+        </div>
       </div>
     );
   }
   return (
     <div className={styles['in_the_news']}>
       <Carousel
-        autoplay
-        autoplaySpeed={1500}
+        // autoplay
+        autoplaySpeed={3000}
         dots={false}
         arrows
         prevArrow={arrow(true)}
         nextArrow={arrow()}
-        lazyLoad={'progressive'}
+        // lazyLoad={'progressive'}
         slidesToShow={3}
         slidesToScroll={3}
       >

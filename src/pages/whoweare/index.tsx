@@ -7,7 +7,7 @@ import SubTitle from './components/subTitle';
 import CoreCarousel from './components/coreCarousel';
 import SeniorManagement from './components/seniorManagement';
 import LatestThinking from './components/latestThinking';
-import InTheNews from './components/inTheNews';
+import InTheNews from '@/components/inTheNews';
 
 import styles from './styles/index.less';
 const [banner] = [require('./images/who_we_are_banner1.png')];
