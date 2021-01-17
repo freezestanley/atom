@@ -29,6 +29,12 @@ const HowItWork: FC<PropTypes> = function (props) {
     }
   }
 
+  const toggle = e => {
+    const current = e.target;
+    const parent = current ? current.parentNode : null;
+    parent && parent.classList.toggle(styles.open);
+  }
+
   return <main className={styles.howitworks}>
     <section className={styles.banner}></section>
     <section className={styles.offerings}>
@@ -113,32 +119,32 @@ const HowItWork: FC<PropTypes> = function (props) {
         <aside>
           <h4>{i18n.formatMessage({ id: 'how_faq_iss_head' })}</h4>
           <ul>
-            <li className={styles.open}>
-              <h6>{i18n.formatMessage({ id: 'how_faq_iss_q_1' })}</h6>
+            <li>
+              <h6 onClick={toggle}>{i18n.formatMessage({ id: 'how_faq_iss_q_1' })}</h6>
               <p>{i18n.formatMessage({ id: 'how_faq_iss_a_1' })}</p>
             </li>
-            <li className={styles.open}>
-              <h6>{i18n.formatMessage({ id: 'how_faq_iss_q_2' })}</h6>
+            <li>
+              <h6 onClick={toggle}>{i18n.formatMessage({ id: 'how_faq_iss_q_2' })}</h6>
               <p>{i18n.formatMessage({ id: 'how_faq_iss_a_2' })}</p>
             </li>
-            <li className={styles.open}>
-              <h6>{i18n.formatMessage({ id: 'how_faq_iss_q_3' })}</h6>
+            <li>
+              <h6 onClick={toggle}>{i18n.formatMessage({ id: 'how_faq_iss_q_3' })}</h6>
               <p>{i18n.formatMessage({ id: 'how_faq_iss_a_3' })}</p>
             </li>
-            <li className={styles.open}>
-              <h6>{i18n.formatMessage({ id: 'how_faq_iss_q_4' })}</h6>
+            <li>
+              <h6 onClick={toggle}>{i18n.formatMessage({ id: 'how_faq_iss_q_4' })}</h6>
               <p>{i18n.formatMessage({ id: 'how_faq_iss_a_4' })}</p>
             </li>
-            <li className={styles.open}>
-              <h6>{i18n.formatMessage({ id: 'how_faq_iss_q_5' })}</h6>
+            <li>
+              <h6 onClick={toggle}>{i18n.formatMessage({ id: 'how_faq_iss_q_5' })}</h6>
               <p>{i18n.formatMessage({ id: 'how_faq_iss_a_5' })}</p>
             </li>
-            <li className={styles.open}>
-              <h6>{i18n.formatMessage({ id: 'how_faq_iss_q_6' })}</h6>
+            <li>
+              <h6 onClick={toggle}>{i18n.formatMessage({ id: 'how_faq_iss_q_6' })}</h6>
               <p>{i18n.formatMessage({ id: 'how_faq_iss_a_6' })}</p>
             </li>
-            <li className={styles.open}>
-              <h6>{i18n.formatMessage({ id: 'how_faq_iss_q_7' })}</h6>
+            <li>
+              <h6 onClick={toggle}>{i18n.formatMessage({ id: 'how_faq_iss_q_7' })}</h6>
               <p>{i18n.formatMessage({ id: 'how_faq_iss_a_7' })}</p>
             </li>
           </ul>
@@ -146,12 +152,12 @@ const HowItWork: FC<PropTypes> = function (props) {
         <aside>
           <h4>{i18n.formatMessage({ id: 'how_faq_inv_head' })}</h4>
           <ul>
-            <li className={styles.open}>
-              <h6>{i18n.formatMessage({ id: 'how_faq_inv_q_1' })}</h6>
+            <li>
+              <h6 onClick={toggle}>{i18n.formatMessage({ id: 'how_faq_inv_q_1' })}</h6>
               <p>{i18n.formatMessage({ id: 'how_faq_inv_a_1' })}</p>
             </li>
-            <li className={styles.open}>
-              <h6>{i18n.formatMessage({ id: 'how_faq_inv_q_2' })}</h6>
+            <li>
+              <h6 onClick={toggle}>{i18n.formatMessage({ id: 'how_faq_inv_q_2' })}</h6>
               <p>
                 1. {i18n.formatMessage({ id: 'how_faq_inv_a_2_1_1' })}<br /><br />
                 {i18n.formatMessage({ id: 'how_faq_inv_a_2_1_2' })}<br /><br />
@@ -161,8 +167,8 @@ const HowItWork: FC<PropTypes> = function (props) {
                 {i18n.formatMessage({ id: 'how_faq_inv_a_2_3_2' })}
               </p>
             </li>
-            <li className={styles.open}>
-              <h6>{i18n.formatMessage({ id: 'how_faq_inv_q_3' })}</h6>
+            <li>
+              <h6 onClick={toggle}>{i18n.formatMessage({ id: 'how_faq_inv_q_3' })}</h6>
               <p>
                 1. {i18n.formatMessage({ id: 'how_faq_inv_a_3_1_1' })}<br /><br />
                 {i18n.formatMessage({ id: 'how_faq_inv_a_3_1_2' })}<br /><br />
@@ -173,16 +179,16 @@ const HowItWork: FC<PropTypes> = function (props) {
                 - {i18n.formatMessage({ id: 'how_faq_inv_a_3_3_2' })}
               </p>
             </li>
-            <li className={styles.open}>
-              <h6>{i18n.formatMessage({ id: 'how_faq_inv_q_4' })}</h6>
+            <li>
+              <h6 onClick={toggle}>{i18n.formatMessage({ id: 'how_faq_inv_q_4' })}</h6>
               <p>{i18n.formatMessage({ id: 'how_faq_inv_a_4' })}</p>
             </li>
-            <li className={styles.open}>
-              <h6>{i18n.formatMessage({ id: 'how_faq_inv_q_5' })}</h6>
+            <li>
+              <h6 onClick={toggle}>{i18n.formatMessage({ id: 'how_faq_inv_q_5' })}</h6>
               <p>{i18n.formatMessage({ id: 'how_faq_inv_a_5' })}</p>
             </li>
-            <li className={styles.open}>
-              <h6>{i18n.formatMessage({ id: 'how_faq_inv_q_6' })}</h6>
+            <li>
+              <h6 onClick={toggle}>{i18n.formatMessage({ id: 'how_faq_inv_q_6' })}</h6>
               <p>{i18n.formatMessage({ id: 'how_faq_inv_a_6' })}</p>
             </li>
           </ul>
@@ -195,24 +201,24 @@ const HowItWork: FC<PropTypes> = function (props) {
         <aside>
           <h4>{i18n.formatMessage({ id: 'how_academy_sto_head' })}</h4>
           <ul>
-            <li className={styles.open}>
-              <h6>{i18n.formatMessage({ id: 'how_academy_sto_q_1' })}</h6>
+            <li>
+              <h6 onClick={toggle}>{i18n.formatMessage({ id: 'how_academy_sto_q_1' })}</h6>
               <p>{i18n.formatMessage({ id: 'how_academy_sto_a_1' })}</p>
             </li>
-            <li className={styles.open}>
-              <h6>{i18n.formatMessage({ id: 'how_academy_sto_q_2' })}</h6>
+            <li>
+              <h6 onClick={toggle}>{i18n.formatMessage({ id: 'how_academy_sto_q_2' })}</h6>
               <p>{i18n.formatMessage({ id: 'how_academy_sto_a_2' })}</p>
             </li>
-            <li className={styles.open}>
-              <h6>{i18n.formatMessage({ id: 'how_academy_sto_q_3' })}</h6>
+            <li>
+              <h6 onClick={toggle}>{i18n.formatMessage({ id: 'how_academy_sto_q_3' })}</h6>
               <p>{i18n.formatMessage({ id: 'how_academy_sto_a_3' })}</p>
             </li>
-            <li className={styles.open}>
-              <h6>{i18n.formatMessage({ id: 'how_academy_sto_q_4' })}</h6>
+            <li>
+              <h6 onClick={toggle}>{i18n.formatMessage({ id: 'how_academy_sto_q_4' })}</h6>
               <p>{i18n.formatMessage({ id: 'how_academy_sto_a_4' })}</p>
             </li>
-            <li className={styles.open}>
-              <h6>{i18n.formatMessage({ id: 'how_academy_sto_q_5' })}</h6>
+            <li>
+              <h6 onClick={toggle}>{i18n.formatMessage({ id: 'how_academy_sto_q_5' })}</h6>
               <p>{i18n.formatMessage({ id: 'how_academy_sto_a_5' })}</p>
             </li>
           </ul>
@@ -220,26 +226,26 @@ const HowItWork: FC<PropTypes> = function (props) {
         <aside>
           <h4>{i18n.formatMessage({ id: 'how_academy_bc_head' })}</h4>
           <ul>
-            <li className={styles.open}>
-              <h6>{i18n.formatMessage({ id: 'how_academy_bc_q_1' })}</h6>
+            <li>
+              <h6 onClick={toggle}>{i18n.formatMessage({ id: 'how_academy_bc_q_1' })}</h6>
               <p>{i18n.formatMessage({ id: 'how_academy_bc_a_1' })}</p>
             </li>
-            <li className={styles.open}>
-              <h6>{i18n.formatMessage({ id: 'how_academy_bc_q_2' })}</h6>
+            <li>
+              <h6 onClick={toggle}>{i18n.formatMessage({ id: 'how_academy_bc_q_2' })}</h6>
               <p>
                 {i18n.formatMessage({ id: 'how_academy_bc_a_2_1' })}<br /><br />
                 {i18n.formatMessage({ id: 'how_academy_bc_a_2_2' })}
               </p>
             </li>
-            <li className={styles.open}>
-              <h6>{i18n.formatMessage({ id: 'how_academy_bc_q_3' })}</h6>
+            <li>
+              <h6 onClick={toggle}>{i18n.formatMessage({ id: 'how_academy_bc_q_3' })}</h6>
               <p>
                 {i18n.formatMessage({ id: 'how_academy_bc_a_3_1' })}<br /><br />
                 {i18n.formatMessage({ id: 'how_academy_bc_a_3_2' })}
               </p>
             </li>
-            <li className={styles.open}>
-              <h6>{i18n.formatMessage({ id: 'how_academy_bc_q_4' })}</h6>
+            <li>
+              <h6 onClick={toggle}>{i18n.formatMessage({ id: 'how_academy_bc_q_4' })}</h6>
               <p>
                 {i18n.formatMessage({ id: 'how_academy_bc_a_4_1' })}<br /><br />
                 {i18n.formatMessage({ id: 'how_academy_bc_a_4_2' })}<br /><br />

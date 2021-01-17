@@ -512,7 +512,13 @@ p.list {
 
   aside {
     width: 495px;
-    margin: 0 80px;
+    margin: 0;
+    margin-left: 80px;
+
+    &:last-child {
+      margin-left: 0;
+      margin-right: 80px;
+    }
 
     h4 {
       margin-bottom: 20px;
@@ -529,6 +535,8 @@ p.list {
 
     h6 {
       padding: 6px 0;
+      width: 490px;
+      cursor: pointer;
       background: url(../images/icon-folded.svg) no-repeat right center;
       border-bottom: 1px solid #e9f0f2;
     }
