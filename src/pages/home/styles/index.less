@@ -673,13 +673,22 @@ p.list {
     margin: 35px 0 110px 0;
   }
 
-
-  div {
-    margin-bottom: 120px;
+  aside {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 1216px;
+    height: 70px;
   }
 
-  a {
-    display: none;
+  div {
+    // display: flex;
+    // flex-direction: row;
+    width: 1160px;
+    height: 70px;
+    position: relative;
+    overflow: hidden;
   }
 
   ul {
@@ -687,21 +696,157 @@ p.list {
     flex-direction: row;
     align-items: flex-start;
     justify-content: flex-start;
-    width: 1000px;
-    height: 70px;
+    width: 300%;
+    left: -100%;
+    top: 0;
+    position: absolute;
+  }
+
+  ul.prev {
+    left: 0;
+    transition: left .3s ease-in-out;
+  }
+
+  ul.next {
+    left: -200%;
+    transition: left .3s ease-in-out;
   }
 
   li {
-    width: 200px;
-    height: 60px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 70px;
+    background-color: #fff;
   }
 
-  li a {
-    display: block;
+  p {
+    display: none;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 70px;
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    &:nth-child(3) {
+      display: flex;
+    }
   }
 
   img {
-    height: 60px;
+    height: 70px;
     width: auto;
+    // margin: 0 35px;
+  }
+
+  .aws {
+    height: 50px;
+  }
+
+  .boarderless {
+    height: 50px;
+  }
+
+  .cbc {
+    height: 80px;
+  }
+
+  .ccb {
+    height: 50px;
+  }
+
+  .cyberport {
+    height: 70px;
+  }
+
+  ;
+
+  .draper {
+    height: 50px;
+  }
+
+  .edv {
+    height: 62px;
+  }
+
+  .elliptic {
+    height: 200px
+  }
+
+  .hanwha {
+    height: 70px
+  }
+
+  .hkbitex {
+    height: 60px
+  }
+
+  .king {
+    height: 60px;
+  }
+
+  .kpmg {
+    height: 70px;
+  }
+
+  .kwm {
+    height: 90px;
+  }
+
+  .ledger {
+    height: 50px;
+  }
+
+  .lenovo {
+    height: 55px;
+  }
+
+  .lingfeung {
+    height: 55px;
+  }
+
+  .lloyds {
+    height: 50px;
+  }
+
+  .nasdaq {
+    height: 60px;
+  }
+
+  .qbn {
+    height: 50px;
+  }
+
+  .refinitiv {
+    height: 50px;
+  }
+
+  .signature {
+    height: 60px;
+  }
+
+  .hksi {
+    width: 213px;
+    height: 70px;
+  }
+
+  .fathk {
+    width: 163px;
+    height: 70px;
+  }
+
+  .hku {
+    width: 300px;
+    height: auto;
+  }
+
+  .deloitte {
+    width: 200px;
+    height: 70px;
   }
 }

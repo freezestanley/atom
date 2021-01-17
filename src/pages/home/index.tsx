@@ -5,11 +5,97 @@ import React, { FC } from 'react';
 import { useIntl } from 'umi';
 import ValueChart from '@/components/valueChart';
 import styles from './styles/index.less';
-import logo from './images/logo-hksi.png';
+
+import aws from './images/logo-aws.svg';
+import boarderless from './images/logo-boarderless.png';
+import cbc from './images/logo-cbc.png';
+import ccb from './images/logo-ccb.png';
+import cyberport from './images/logo-cyberport.png';
+import deloitte from './images/logo-deloitte.svg';
+import draper from './images/logo-draper.png';
+import edv from './images/logo-edv.png';
+import elliptic from './images/logo-elliptic.svg';
+import ftahk from './images/logo-ftahk.png';
+import hanwha from './images/logo-hanwha.png';
+import hkbitex from './images/logo-hkbitex.png';
+import hksi from './images/logo-hksi.png';
+import hku from './images/logo-hku.svg';
+import king from './images/logo-king.png';
+import kpmg from './images/logo-kpmg.svg';
+import kwm from './images/logo-kwm.png';
+import ledger from './images/logo-ledger.svg';
+import lenovo from './images/logo-lenovo.png';
+import lingfeung from './images/logo-lingfeung.png';
+import lloyds from './images/logo-lloyds.svg';
+import nasdaq from './images/logo-nasdaq.svg';
+import qbn from './images/logo-qbn.png';
+import refinitiv from './images/logo-refinitiv.png';
+import signature from './images/logo-signature.png';
+
+const logos = {
+  aws, boarderless, cbc, ccb, cyberport,
+  deloitte, draper, edv, elliptic, ftahk,
+  hanwha, hkbitex, hksi, hku, king,
+  kpmg, kwm, ledger, lenovo, lingfeung,
+  lloyds, nasdaq, qbn, refinitiv, signature
+};
 
 interface PropTypes { }
 const Home: FC<PropTypes> = function (props) {
   const i18n = useIntl();
+
+  let index = 0;
+
+  const slideNext = e => {
+    const container = e.target.parentNode.getElementsByTagName('div')[0];
+    const templates = container.getElementsByTagName('p');
+    const size = templates.length;
+
+    const [background, foreground] = container.getElementsByTagName('ul');
+    const slidersOfForeground = foreground.getElementsByTagName('li');
+    const slidersOfBackground = background.getElementsByTagName('li');
+
+    slidersOfBackground[0].innerHTML = templates[index - 1 < 0 ? index - 1 + size : index - 1].innerHTML;
+    slidersOfBackground[1].innerHTML = templates[index].innerHTML;
+    slidersOfBackground[2].innerHTML = templates[index + 1 > size - 1 ? index + 1 - size : index + 1].innerHTML;
+    foreground.style.display = 'none';
+    templates[0].style.display = 'none';
+
+    index = index + 1 > size - 1 ? index + 1 - size : index + 1;
+    slidersOfForeground[1].innerHTML = templates[index].innerHTML;
+
+    background.className = styles.next;
+    setTimeout(() => {
+      foreground.style.display = 'flex';
+      background.className = '';
+    }, 400);
+  }
+
+  const slidePrev = e => {
+    const container = e.target.parentNode.getElementsByTagName('div')[0];
+    const templates = container.getElementsByTagName('p');
+    const size = templates.length;
+
+    const [background, foreground] = container.getElementsByTagName('ul');
+    const slidersOfForeground = foreground.getElementsByTagName('li');
+    const slidersOfBackground = background.getElementsByTagName('li');
+
+    slidersOfBackground[0].innerHTML = templates[index - 1 < 0 ? index - 1 + size : index - 1].innerHTML;
+    slidersOfBackground[1].innerHTML = templates[index].innerHTML;
+    slidersOfBackground[2].innerHTML = templates[index + 1 > size - 1 ? index + 1 - size : index + 1].innerHTML;
+    foreground.style.display = 'none';
+    templates[0].style.display = 'none';
+
+    index = index - 1 < 0 ? index - 1 + size : index - 1;
+    slidersOfForeground[1].innerHTML = templates[index].innerHTML;
+
+    background.className = styles.prev;
+    setTimeout(() => {
+      foreground.style.display = 'flex';
+      background.className = '';
+    }, 400);
+  }
+
   return <main className={styles.home}>
     <section className={styles.banner}>
       <h2>{i18n.formatMessage({ id: 'home_banner_head1' })}</h2>
@@ -133,16 +219,51 @@ const Home: FC<PropTypes> = function (props) {
     </section>
     <section className={styles.partners}>
       <h2>{i18n.formatMessage({ id: 'home_partners_head' })}</h2>
-      <div>
-        <a>&lt;</a>
-        <ul>
-          <li><a><img src={logo} /></a></li>
-          <li><a><img src={logo} /></a></li>
-          <li><a><img src={logo} /></a></li>
-          <li><a><img src={logo} /></a></li>
-        </ul>
-        <a>&gt;</a>
-      </div>
+      <aside>
+        <a onClick={slidePrev}>&lt;</a>
+        <div>
+          <ul><li /><li /><li /></ul>
+          <ul><li /><li /><li /></ul>
+          <p>
+            <a href="#"><img className={styles.hksi} src={logos.hksi} /></a>
+            <a href="#"><img className={styles.ftahk} src={logos.ftahk} /></a>
+            <a href="#"><img className={styles.hku} src={logos.hku} /></a>
+            <a href="#"><img className={styles.deloitte} src={logos.deloitte} /></a>
+          </p>
+          <p>
+            <a href="#"><img className={styles.nasdaq} src={logos.nasdaq} /></a>
+            <a href="#"><img className={styles.qbn} src={logos.qbn} /></a>
+            <a href="#"><img className={styles.refinitiv} src={logos.refinitiv} /></a>
+            <a href="#"><img className={styles.signature} src={logos.signature} /></a>
+          </p>
+          <p>
+            <a href="#"><img className={styles.aws} src={logos.aws} /></a>
+            <a href="#"><img className={styles.boarderless} src={logos.boarderless} /></a>
+            <a href="#"><img className={styles.cbc} src={logos.cbc} /></a>
+            <a href="#"><img className={styles.ccb} src={logos.ccb} /></a>
+            <a href="#"><img className={styles.cyberport} src={logos.cyberport} /></a>
+          </p>
+          <p>
+            <a href="#"><img className={styles.ledger} src={logos.ledger} /></a>
+            <a href="#"><img className={styles.lenovo} src={logos.lenovo} /></a>
+            <a href="#"><img className={styles.lingfeung} src={logos.lingfeung} /></a>
+            <a href="#"><img className={styles.lloyds} src={logos.lloyds} /></a>
+          </p>
+          <p>
+            <a href="#"><img className={styles.hkbitex} src={logos.hkbitex} /></a>
+            <a href="#"><img className={styles.king} src={logos.king} /></a>
+            <a href="#"><img className={styles.kpmg} src={logos.kpmg} /></a>
+            <a href="#"><img className={styles.kwm} src={logos.kwm} /></a>
+          </p>
+          <p>
+            <a href="#"><img className={styles.draper} src={logos.draper} /></a>
+            <a href="#"><img className={styles.edv} src={logos.edv} /></a>
+            <a href="#"><img className={styles.elliptic} src={logos.elliptic} /></a>
+            <a href="#"><img className={styles.hanwha} src={logos.hanwha} /></a>
+          </p>
+        </div>
+        <a onClick={slideNext}>&gt;</a>
+      </aside>
     </section>
   </main>;
 };
