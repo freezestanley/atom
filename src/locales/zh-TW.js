@@ -111,6 +111,9 @@ export default {
   home_products_item_text_2_6: '代幣持有人溝通',
   home_products_item_text_3_1: '有關盡職調查範圍和協助的諮詢服務',
   home_products_item_text_3_2: '擬寫報價備忘錄並連接到數字交易所（減低審查所需時間）',
+  home_products_invest_subscribe: '訂閱 HKbitEX 上的證券型代幣項目',
+  home_products_invest_comment: 'HKbitEX 是一家機構級數字資產交易所，並有保險覆蓋其託管業務。 HKbitEX 是 Atom 8 有限公司的附屬公司。',
+  
   home_partners_head: '我們的合作夥伴均為行業中的佼佼者',
 
   how_banner_head_1: 'What are STOs -',

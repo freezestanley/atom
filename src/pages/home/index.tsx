@@ -6,6 +6,9 @@ import { useIntl } from 'umi';
 import ValueChart from '@/components/valueChart';
 import styles from './styles/index.less';
 
+import prev from './images/icon-arrow-prev.svg';
+import next from './images/icon-arrow-next.svg';
+
 import aws from './images/logo-aws.svg';
 import boarderless from './images/logo-boarderless.png';
 import cbc from './images/logo-cbc.png';
@@ -47,7 +50,7 @@ const Home: FC<PropTypes> = function (props) {
   let index = 0;
 
   const slideNext = e => {
-    const container = e.target.parentNode.getElementsByTagName('div')[0];
+    const container = e.target.parentNode.parentNode.getElementsByTagName('div')[0];
     const templates = container.getElementsByTagName('p');
     const size = templates.length;
 
@@ -72,7 +75,7 @@ const Home: FC<PropTypes> = function (props) {
   }
 
   const slidePrev = e => {
-    const container = e.target.parentNode.getElementsByTagName('div')[0];
+    const container = e.target.parentNode.parentNode.getElementsByTagName('div')[0];
     const templates = container.getElementsByTagName('p');
     const size = templates.length;
 
@@ -94,6 +97,16 @@ const Home: FC<PropTypes> = function (props) {
       foreground.style.display = 'flex';
       background.className = '';
     }, 400);
+  }
+
+  const openIssueDialog = e => {
+    const section = e.target.parentNode.parentNode;
+    section.classList.remove(styles.invest);
+  }
+
+  const openInvestDialog = e => {
+    const section = e.target.parentNode.parentNode;
+    section.classList.add(styles.invest);
   }
 
   return <main className={styles.home}>
@@ -184,10 +197,10 @@ const Home: FC<PropTypes> = function (props) {
     <section className={styles.products}>
       <h2>{i18n.formatMessage({ id: 'home_products_head' })}</h2>
       <div>
-        <a className={styles.products_highlight}>
+        <a onClick={openIssueDialog}>
           {i18n.formatMessage({ id: 'home_products_choose_text_1' })}
         </a>
-        <a>
+        <a onClick={openInvestDialog}>
           {i18n.formatMessage({ id: 'home_products_choose_text_2' })}
         </a>
       </div>
@@ -216,11 +229,16 @@ const Home: FC<PropTypes> = function (props) {
           <p className={styles.list}>{i18n.formatMessage({ id: 'home_products_item_text_3_2' })}</p>
         </li>
       </ul>
+      <article>
+        <img src={logos.hkbitex} />
+        <a>{i18n.formatMessage({ id: 'home_products_invest_subscribe' })}</a>
+        <p>{i18n.formatMessage({ id: 'home_products_invest_comment' })}</p>
+      </article>
     </section>
     <section className={styles.partners}>
       <h2>{i18n.formatMessage({ id: 'home_partners_head' })}</h2>
       <aside>
-        <a onClick={slidePrev}>&lt;</a>
+        <a className={styles.button} onClick={slidePrev}><img src={prev} /></a>
         <div>
           <ul><li /><li /><li /></ul>
           <ul><li /><li /><li /></ul>
@@ -262,7 +280,7 @@ const Home: FC<PropTypes> = function (props) {
             <a href="#"><img className={styles.hanwha} src={logos.hanwha} /></a>
           </p>
         </div>
-        <a onClick={slideNext}>&gt;</a>
+        <a className={styles.button} onClick={slideNext}><img src={next} /></a>
       </aside>
     </section>
   </main>;

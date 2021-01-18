@@ -103,6 +103,9 @@ export default {
   home_products_item_text_2_6: 'Token holder communication',
   home_products_item_text_3_1: 'Consultation on scope of and assistance on due diligence required',
   home_products_item_text_3_2: 'Drafting offer memorandum in connection to token listing on digital exchanges (i.e. minimize vetting time required)',
+  home_products_invest_subscribe: 'Subscribe to STO projects on HKbitEX',
+  home_products_invest_comment: 'HKbitEX is an institutional-grade digital asset exchange with insurance covered custody solutions. HKbitEX is an affiliate company to Atom 8 Limited.',
+  
   home_partners_head: 'We work with industry-leading partners',
 
   how_banner_head_1: 'What are STOs -',
