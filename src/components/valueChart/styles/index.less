@@ -1,0 +1,110 @@
+@color1: #373737;
+@color2: #544837;
+@color3: #2f281e;
+
+aside.value_chart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 1164px;
+  height: 550px;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, .1);
+  background: no-repeat 0 0;
+  background: url('data:image/svg+xml,<svg width="1163" height="550" version="1.1" xmlns="http://www.w3.org/2000/svg"><line x1="180" y1="250" x2="922" y2="250" style="stroke:rgb(239,87,12);stroke-width:10"/><rect x="313" y="109" rx="20" ry="20" width="532" height="370" style="fill:rgb(255,238,177);opacity:0.9"/><circle cx="190" cy="250" r="55" stroke="rgb(239,87,12)" stroke-width="2" fill="rgb(255,255,255)"/><circle cx="922" cy="250" r="55" stroke="rgb(239,87,12)" stroke-width="2" fill="rgb(255,255,255)"/></svg>') no-repeat 0 0;
+
+
+  h2 {
+    font-weight: normal;
+    margin: 0;
+    padding: 0;
+    font-size: 34px;
+    color: @color3;
+    width: 1125px;
+    margin: 70px 0 37px 0;
+  }
+
+  h3 {
+    font-weight: normal;
+    margin: 0;
+    padding: 0;
+    font-size: 22px;
+    font-weight: 600;
+    color: @color3;
+    text-transform: uppercase;
+    margin: 30px 0 27px 0;
+  }
+
+  ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 850px;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+  }
+
+  div {
+    width: 1050px;
+    height: 53px;
+    margin-top: -30px;
+    font-size: 16px;
+    color: @color2;
+    line-height: 1.67;
+    text-align: right;
+  }
+
+  li {
+    margin: 0;
+    padding: 0;
+    display: block;
+    width: 140px;
+    padding-top: 130px;
+    background: no-repeat 0 32px;
+    background-size: 70px 70px;
+
+    h3 {
+      text-transform: none;
+      line-height: 1.2;
+      margin: 0 0 20px 0;
+    }
+
+    &:nth-child(1) {
+      width: 150px;
+      background-image: url(../images/icon-building.png);
+    }
+
+    &:nth-child(2) {
+      background-image: url(../images/icon-edit.png);
+    }
+
+    &:nth-child(3) {
+      background-image: url(../images/icon-film.png);
+    }
+
+    &:nth-child(4) {
+      background-image: url(../images/icon-handshake.png);
+    }
+
+    &:nth-child(5) {
+      width: 120px;
+      background-image: url(../images/icon-investor.png);
+    }
+  }
+
+  p {
+    color: @color2;
+    font-size: 16px;
+    line-height: 1.7;
+    padding: 0;
+    margin: 0;
+  }
+
+  p.list {
+    padding-left: 20px;
+    background: url('data:image/svg+xml;utf8,<svg width="7" height="7" version="1.1" xmlns="http://www.w3.org/2000/svg"><circle cx="3" cy="3" r="2.5" stroke="rgb(84,72,55)" stroke-width="0" fill="rgb(84,72,55)"/></svg>') no-repeat 0 11px;
+  }
+}

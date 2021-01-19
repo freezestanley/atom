@@ -2,7 +2,7 @@
  * @description 描述
  */
 import React, { FC } from 'react';
-import AddValues from './components/addValues';
+import ValueChart from '@/components/valueChart';
 import SubTitle from './components/subTitle';
 import CoreCarousel from './components/coreCarousel';
 import SeniorManagement from './components/seniorManagement';
@@ -20,9 +20,9 @@ const investors = [
   require('./images/investors/2_3.png'),
   require('./images/investors/2_4.png'),
 ];
-interface PropTypes {}
+interface PropTypes { }
 
-const WhoWeAre: FC<PropTypes> = function(props) {
+const WhoWeAre: FC<PropTypes> = function (props) {
   return (
     <div className={styles['whoweare']}>
       <div className={styles['banner']}>
@@ -47,19 +47,7 @@ const WhoWeAre: FC<PropTypes> = function(props) {
           </p>
         </div>
         <div className={styles['blockchain-powered']}>
-          <div className={styles['blockchain-powered-bg']}></div>
-          <div className={styles['card']}>
-            <h3 className={styles['title']}>
-              A blockchain-powered platform that provides end-to-end STO
-              solutions
-            </h3>
-            {/* 我们的增值点 */}
-            <AddValues />
-            <div className={styles['card-tips']}>
-              <section>Sponsors: SFC RA 6</section>
-              <section>Brokers: SFC RA1 & 4</section>
-            </div>
-          </div>
+          <ValueChart />
         </div>
         <div className={styles['core-values']}>
           <SubTitle>Core Values</SubTitle>

@@ -2,10 +2,10 @@
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 
 <svg width="1214" height="260" version="1.1" xmlns="http://www.w3.org/2000/svg">
-    <line x1="292" y1="0" x2="292" y2="243" style="stroke:#bd3806;stroke-width:4"/>
-    <circle cx="292" cy="243" r="8" fill="#bd3806"/>
-    <line x1="705" y1="0" x2="705" y2="243" style="stroke:#ef570c;stroke-width:4"/>
-    <circle cx="705" cy="243" r="8" fill="#ef570c"/>
-    <line x1="1123" y1="0" x2="1123" y2="243" style="stroke:#ef570c;stroke-width:4"/>
-    <circle cx="1123" cy="243" r="8" fill="#ef570c"/>
+    <line x1="292" y1="0" x2="292" y2="215" style="stroke:#bd3806;stroke-width:4"/>
+    <circle cx="292" cy="215" r="10" fill="#bd3806"/>
+    <line x1="705" y1="0" x2="705" y2="215" style="stroke:#ef570c;stroke-width:4"/>
+    <circle cx="705" cy="215" r="10" fill="#ef570c"/>
+    <line x1="1123" y1="0" x2="1123" y2="215" style="stroke:#ef570c;stroke-width:4"/>
+    <circle cx="1123" cy="215" r="10" fill="#ef570c"/>
 </svg>
