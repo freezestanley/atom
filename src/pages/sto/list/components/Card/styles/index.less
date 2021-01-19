@@ -1,0 +1,229 @@
+.sto_card {
+  width: 370px;
+  height: 820px;
+  border-radius: 11px;
+  box-shadow: 0 2px 50px 0 rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  cursor: pointer;
+  .sto_header {
+    height: 40px;
+    line-height: 40px;
+    vertical-align: middle;
+    background-color: #ef570c;
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: right;
+    border-radius: 11px 11px 0 0;
+    box-shadow: 0 2px 50px 0 rgba(0, 0, 0, 0.1);
+    padding: 10px 20px 9px 221px;
+    text-decoration: underline;
+  }
+  .sto_banner {
+    display: block;
+    height: 254px;
+    width: 100%;
+    background-size: 100% 100%;
+    position: relative;
+    &::before {
+      content: attr(alt);
+      font-family: Inter;
+      font-size: 20px;
+      font-weight: normal;
+      font-stretch: normal;
+      font-style: normal;
+      letter-spacing: normal;
+      text-align: center;
+      width: 99px;
+      height: 30px;
+      padding: 3px 5px;
+      border-radius: 11px;
+      border: solid 1px #fff;
+      display: block;
+      line-height: 20px;
+      vertical-align: middle;
+      overflow: hidden;
+      position: relative;
+      top: 14px;
+      left: 14px;
+      color: #fff;
+    }
+  }
+  .sto_line {
+    opacity: 0.1;
+    border-bottom: 1px solid #000000;
+    width: 300px;
+    margin: 35px auto 25px;
+  }
+  .sto_table {
+    padding: 0;
+    width: 330px;
+    margin: 0 auto;
+    display: table;
+    & > li {
+      display: table-row;
+      & > div {
+        display: table-cell;
+        font-size: 22px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        color: #373737;
+      }
+    }
+    & > li:first-child {
+      & > div {
+        font-size: 22px;
+        font-weight: bold;
+        padding-bottom: 23px;
+      }
+    }
+  }
+  .sto_title {
+    font-size: 22px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #0d1828;
+    width: 330px;
+    margin: 25px auto 40px;
+  }
+  .sto_website {
+    width: 330px;
+    margin: 0px auto 0px;
+    font-size: 14px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.43;
+    letter-spacing: normal;
+    color: #ff5858;
+
+    &::before {
+      content: ' ';
+      display: inline-block;
+      background-image: url('../images/globo.png');
+      background-size: 100% 100%;
+      width: 22px;
+      height: 22px;
+      margin-right: 16px;
+      transform: translate(6px, 6px);
+    }
+  }
+  .sto_warning {
+    border: 1px solid #666;
+    border-radius: 99px;
+    display: inline-block;
+    border: 1px solid #aaa;
+    border-radius: 99px;
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    text-align: center;
+    font-size: 16px;
+    color: #aaa;
+    transform: scale(0.8);
+    float: right;
+  }
+  .sto_fund {
+    width: 330px;
+    margin: 20px auto 0;
+    border-top: 3px solid #ef570c;
+    text-align: center;
+    font-family: OpenSans;
+    font-size: 16px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.56;
+    letter-spacing: normal;
+    color: #ef570c;
+    padding: 12px 0 0 0;
+  }
+  .sto_info_box {
+    padding: 0;
+    margin: 0;
+    width: 330px;
+    margin: 0 auto;
+    & > li {
+      list-style: none;
+      & > div {
+        display: inline-block;
+        font-size: 22px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 36px;
+        letter-spacing: normal;
+        text-align: right;
+        vertical-align: top;
+        overflow: hidden;
+        word-break: break-all;
+        &:first-child {
+          text-align: left;
+          color: #9ca1ae;
+          width: 60%;
+        }
+        &:last-child {
+          text-align: right;
+          color: #373737;
+          width: 40%;
+        }
+      }
+    }
+  }
+}
+.sto_morecard {
+  width: 370px;
+  height: 517px;
+  padding: 0 0 44px;
+  border-radius: 11px;
+  box-shadow: 0 2px 50px 0 rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  cursor: pointer;
+  .sto_morecard_banner {
+    background-image: url('../images/sto_dummy2.png');
+    display: block;
+    width: 100%;
+    height: 245px;
+    background-size: 100% 100%;
+    border-radius: 11px 11px 0 0;
+  }
+  .sto_morecard_title {
+    margin: 25px auto 10px;
+    font-size: 22px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #0d1828;
+  }
+  .sto_morecard_info {
+    height: 109px;
+    overflow: hidden;
+    width: 305px;
+    margin: 0 auto;
+    color: #788995;
+  }
+  .sto_morecard_more {
+    margin: 22px auto 0;
+    border-radius: 11px;
+    background-color: #ef570c;
+    color: #fff;
+    text-align: center;
+    width: 295px;
+    height: 42px;
+    line-height: 42px;
+    vertical-align: middle;
+  }
+}

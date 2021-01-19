@@ -33,7 +33,6 @@ export default {
     'The Information is being provided solely for general information purposes and is not, shall not be construed as, and does not constitute as legal, business, or tax advice. In deciding whether to make any investment decision, the recipient must rely on its own evaluation of the terms of any proposed investment and the merits and risks involved and should seek independent advice where necessary.',
   list_label: '證券型代幣項目',
   list_comingsoon: '即將開始! 請填寫您的郵箱以獲取最新信息',
-
   home_getintouch: '聯絡我們',
   home_banner_head1: '開啟另一條進入資本市場的路徑：',
   home_banner_head2: '更快到手的資金。更低的成本。',
@@ -103,7 +102,6 @@ export default {
   home_products_item_text_3_1: '有關盡職調查範圍和協助的諮詢服務',
   home_products_item_text_3_2: '擬寫報價備忘錄並連接到數字交易所（減低審查所需時間）',
   home_partners_head: '我們的合作夥伴均為行業中的佼佼者',
-
   how_banner_head_1: 'What are STOs -',
   how_banner_head_2: 'Security Token Offerings',
   how_banner_text: '證券型代幣是通過區塊鏈技術創建的資產， 可以代表資產的擁有權或經濟權利。 它們在全球主要司法管轄區被廣泛監管為證券。',
@@ -148,5 +146,30 @@ export default {
   how_sto_item_text_6: '24/7 市場准入',
   how_faq_head: 'FAQs',
   how_academy_head: 'STO Academy',
-  
+
+  footer_info1: '',
+  footer_info2: '',
+  footer_info3: '',
+  footer_info4: '',
+  footer_info5: '',
+  footer_info6: '',
+  list_label: '證券型代幣項目',
+  list_comingsoon: '即將開始! 請填寫您的郵箱以獲取最新信息',
+  sto_email_placeholder: '請輸入您的郵箱',
+  sto_email_submit: '提交',
+  sto_Completed: '已完成',
+  sto_Alltype: '所有',
+  sto_Current: '当前',
+  sto_Upcoming: '即将',
+  sto_open: '查看',
+  sto_viewfund: '查看基金',
+  sto_targetreturn: '目標返回',
+  sto_targetsize: '目標大小',
+  sto_investment: '投資期限',
+  sto_strategy: '策略類型',
+  sto_geograhies: '地理',
+  sto_industry: '行業焦點',
+  sto_opport: '更多機會',
+  sto_registmore: '註冊查看所有',
+  sto_sign: 'Sign in for more details'
 };

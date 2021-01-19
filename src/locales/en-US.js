@@ -25,7 +25,7 @@ export default {
   list_label: 'STO projects',
   list_comingsoon:
     'Coming Soon! Please fill in your email address to receive latest updates',
-  
+
   home_getintouch: 'GET IN TOUCH',
   home_banner_head1: 'Enabling alternate avenue to Capital Markets:',
   home_banner_head2: 'Faster access to capital. Lower cost.',
@@ -95,7 +95,6 @@ export default {
   home_products_item_text_3_1: 'Consultation on scope of and assistance on due diligence required',
   home_products_item_text_3_2: 'Drafting offer memorandum in connection to token listing on digital exchanges (i.e. minimize vetting time required)',
   home_partners_head: 'We work with industry-leading partners',
-
   how_banner_head_1: 'What are STOs -',
   how_banner_head_2: 'Security Token Offerings',
   how_banner_text: 'Security Tokens are digital representations of ownership of assets or economic rights, created via blockchain technology. They are widely regulated as securities in major jurisdictions worldwide.',
@@ -140,5 +139,22 @@ export default {
   how_sto_item_text_6: '24/7 market access​',
   how_faq_head: 'FAQs',
   how_academy_head: 'STO Academy',
-  
+  list_comingsoon: 'Coming Soon! Please fill in your email address to receive latest updates',
+  sto_email_placeholder: 'Enter your Email address',
+  sto_email_submit: 'submit',
+  sto_Completed: 'Completed',
+  sto_Alltype: 'All type',
+  sto_Current: 'Current',
+  sto_Upcoming: 'Upcoming',
+  sto_open: 'OPEN',
+  sto_viewfund: 'VIEW FUND',
+  sto_targetreturn: 'Target Return',
+  sto_targetsize: 'Target Size',
+  sto_investment: 'Investment Horizon',
+  sto_strategy: 'Strategy Type',
+  sto_geograhies: 'Geograhies',
+  sto_industry: 'Industry Foucus',
+  sto_opport: 'More Opportunities',
+  sto_registmore: 'Register now to view them all',
+  sto_sign: 'Sign in for more details'
 };

@@ -20,6 +20,10 @@ const routers: IConfig['routes'] = [
         path: '/whoweare',
         component: '@/pages/whoweare/index',
       },
+      {
+        path: '/detail',
+        component: '@/pages/sto/detail/index',
+      },
       { exact: true, path: '*', redirect: './home' },
     ],
   },

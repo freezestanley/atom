@@ -16,6 +16,23 @@
       color: #ffffff;
       margin-top: 139px;
     }
+    .sto_email {
+      margin: 70px auto 30px;
+      .sto_emailInput {
+        width: 320px;
+        height: 54px;
+      }
+      .sto_submit {
+        width: 159px;
+        height: 54px;
+        margin: 0 0 0 7px;
+        padding: 16px 51px 18px 55px;
+        border-radius: 3px;
+        background-color: #ff5b1c;
+        color: #ffffff;
+        border: none;
+      }
+    }
     .sto_retitle {
       font-size: 32px;
       letter-spacing: normal;
@@ -34,6 +51,97 @@
       color: #ffffff;
       width: 1125px;
       text-align: left;
+    }
+  }
+}
+.sto_havelist {
+  .sto_banner {
+    height: 300px;
+    background: url('../images/sto_banner2.png');
+    background-size: 100% 100%;
+    padding: 1px 0;
+  }
+
+  .sto_listbox {
+    width: 1212px;
+    margin: 0 auto;
+    .sto_list_menu {
+      margin: 50px auto;
+    }
+    .sto_type_filter {
+      width: 175px;
+      height: 55px;
+      line-height: 55px;
+      vertical-align: middle;
+      border-radius: 4px;
+      background-color: #fcf3ec;
+      float: right;
+      background: url('../images/filter.png') #fcf3ec no-repeat;
+      background-size: 16px 13px;
+      background-position: 24px 22px;
+      :global(.ant-select-selector) {
+        border: none;
+        background: none;
+        height: 55px;
+        line-height: 55px;
+        vertical-align: middle;
+      }
+      :global(.ant-select-selector .ant-select-selection-item) {
+        line-height: 55px;
+        color: #ef570c;
+        text-indent: 40px;
+      }
+      :global(.ant-select-arrow) {
+        color: #ef570c;
+      }
+    }
+    .sto_list_filter {
+      padding: 0;
+      margin: 0;
+      display: table;
+      border: solid 1px #ef570c;
+      border-radius: 4px;
+      & > li:last-child {
+        border: none;
+      }
+      :global(.seled) {
+        color: #fff;
+        background: #ef570c;
+      }
+      & > li {
+        list-style: none;
+        width: 180px;
+        height: 55px;
+        line-height: 55px;
+        vertical-align: middle;
+        text-align: center;
+        display: table-cell;
+        font-family: Inter;
+        font-size: 16px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        text-align: center;
+        color: #ef570c;
+        border-right: solid 1px #ef570c;
+        cursor: pointer;
+      }
+    }
+    .sto_card_box {
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      & > li {
+        list-style: none;
+        flex: 1;
+        margin: 0 0 50px 0;
+        display: flex;
+        align-items: center;
+      }
     }
   }
 }

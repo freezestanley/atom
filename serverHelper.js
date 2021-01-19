@@ -19,7 +19,7 @@ const parseNavLang = (ctx) => {
   let navigatorLang;
   const clientLang = ctx.get('Accept-Language');
   if (clientLang.startsWith('zh')) {
-    navigatorLang = 'zh-CN';
+    navigatorLang = 'zh-TW';
   } else if (clientLang.startsWith('en')) {
     navigatorLang = 'en-US';
   }

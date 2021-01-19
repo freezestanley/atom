@@ -12,7 +12,7 @@ export default defineConfig({
   theme,
   title: 'Atom 8',
   locale: {
-    default: 'zh-CN',
+    default: 'zh-TW',
     antd: false,
     title: false,
     baseNavigator: true,
